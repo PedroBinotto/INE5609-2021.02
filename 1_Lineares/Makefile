@@ -9,5 +9,5 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CC) -o $@ $^
 
 clean:
-	rm $(BUILDDIR)/stack.o
+	rm $(BUILDDIR)/*.o
 
