@@ -1,6 +1,5 @@
-bin/*
-!bin/.*
-obj/*
-!obj/.*
-
+*/bin/*
+!*/bin/.gitkeep
+*/obj/*
+!*/obj/.gitkeep
 
