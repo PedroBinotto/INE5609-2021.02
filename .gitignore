@@ -1,1 +1,6 @@
-target/
+bin/*
+!bin/.*
+obj/*
+!obj/.*
+
+
