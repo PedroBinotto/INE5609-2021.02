@@ -20,6 +20,8 @@ void freeList(Node *node);
 bool addToTail(List list, int value);
 bool addToHead(List &list, int value);
 bool removeByValue(List &list, int val);
+bool removeFromHead(List &list);
+bool removeFromTail(List &list);
 
 int main(void)
 {
@@ -29,6 +31,11 @@ int main(void)
     addToTail(list, 420);
     addToHead(list, 40);
     removeByValue(list, 18);
+    crawl(list);
+
+    removeFromHead(list);
+    removeFromTail(list);
+    cout << "==========\n";
     crawl(list);
 
     freeList(list);
@@ -77,7 +84,25 @@ bool addToHead(List &list, int value) {
     return true;
 }
 
-// TODO: remove head/ remove tail
+bool removeFromTail(List &list) {
+    Node *currentNode = list;
+    Node *previousNode = NULL;
+    while(currentNode->next != NULL) {
+        previousNode = currentNode;
+        currentNode = currentNode->next;
+    }
+    previousNode->next = NULL;
+    delete currentNode;
+    return true;
+}
+
+
+bool removeFromHead(List &list) {
+   Node *tmp = list;
+   list = list->next;
+   delete tmp;
+   return true;
+}
 
 bool removeByValue(List &list, int val) {
     Node *currentNode = list;
