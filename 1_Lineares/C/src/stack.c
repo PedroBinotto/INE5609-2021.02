@@ -36,7 +36,7 @@ bool pop(void) {
 }
 
 node_t *push(int value) {
-    node_t *newNode = (node_t *) malloc(sizeof(node_t));
+    node_t *newNode = malloc(sizeof(node_t));
     newNode->value = value;
     newNode->next = top;
     top = newNode;
