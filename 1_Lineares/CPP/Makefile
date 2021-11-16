@@ -3,7 +3,7 @@ CC=g++
 SRCDIR=src
 BUILDDIR=obj
 
-all: $(BUILDDIR)/stack.o $(BUILDDIR)/linearQueue.o $(BUILDDIR)/circularQueue.o $(BUILDDIR)/linkedList.o 
+all: $(BUILDDIR)/stack.o $(BUILDDIR)/linearQueue.o $(BUILDDIR)/circularQueue.o $(BUILDDIR)/linkedList.o $(BUILDDIR)/main.o
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CC) -o $@ $^
