@@ -1,5 +1,7 @@
 CC=g++
 
+# TODO: Reescrever Makefile para incluir as libs em compile-time
+
 SRCDIR=src
 BUILDDIR=obj
 

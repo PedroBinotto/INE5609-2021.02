@@ -20,16 +20,28 @@ public:
         stack = newNode;
     }
 
-    //pushToStack(Stack stack, asdlas);
-    // Queue instanceQueue(void) {}
+    void freeStack(const Stack &stack) {
+        if (stack->getNextNode() != NULL) {
+            this->freeStack(stack->getNextNode());
+        }
+        delete stack;
+    }
 };
 
 int main(void) {
     Demo instanciador = Demo();
+
     Stack stack = instanciador.instanceStack();
 
-    instanciador.pushToStack(stack, "head", 1);
-    std::cout << stack->getValText() << std::endl;
+    instanciador.pushToStack(stack, "1", 1);
+    instanciador.pushToStack(stack, "2", 2);
+    instanciador.pushToStack(stack, "3", 3);
+    instanciador.pushToStack(stack, "4", 4);
+
+    instanciador.popFromStack(stack);
+
+    instanciador.freeStack(stack);
+
     return 0;
 }
 
