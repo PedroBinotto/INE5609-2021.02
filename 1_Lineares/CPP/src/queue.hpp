@@ -3,6 +3,9 @@
 
 #include "linkedList.hpp"
 
-/* typedef Node *Stack; */
+typedef struct Queue {
+    linkedList::Node *head;
+    linkedList::Node *tail;
+} Queue;
 
 #endif

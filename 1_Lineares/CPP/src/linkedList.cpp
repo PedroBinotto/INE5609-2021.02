@@ -2,6 +2,8 @@
 #include <bits/stdc++.h>
 #include "linkedList.hpp"
 
+using namespace linkedList;
+
 Node::Node(std::string valTex, int valInt, Node *nextNode) {
     text=valTex;
     number=valInt;

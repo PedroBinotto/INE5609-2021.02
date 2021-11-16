@@ -3,6 +3,6 @@
 
 #include "linkedList.hpp"
 
-typedef Node *Stack;
+typedef linkedList::Node *Stack;
 
 #endif

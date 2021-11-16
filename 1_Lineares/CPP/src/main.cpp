@@ -10,13 +10,13 @@ public:
     }
 
     void popFromStack(Stack &stack) {
-        Node *tmp = stack;
+        linkedList::Node *tmp = stack;
         stack = stack->getNextNode();
         delete tmp;
     }
 
     void pushToStack(Stack &stack, std::string valTex = "", int valNum = 0) {
-        Node *newNode = new Node(valTex, valNum, stack);
+        linkedList::Node *newNode = new linkedList::Node(valTex, valNum, stack);
         stack = newNode;
     }
 
@@ -26,6 +26,11 @@ public:
         }
         delete stack;
     }
+
+    // void instanceQueue()
+    // void enqueue()
+    // void dequeue()
+    // void freeQueue
 };
 
 int main(void) {
