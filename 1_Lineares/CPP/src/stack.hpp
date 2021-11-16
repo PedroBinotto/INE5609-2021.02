@@ -3,6 +3,8 @@
 
 #include "linkedList.hpp"
 
-typedef linkedList::Node *Stack;
+namespace stack {
+    typedef linkedList::Node *Stack;
+}
 
 #endif

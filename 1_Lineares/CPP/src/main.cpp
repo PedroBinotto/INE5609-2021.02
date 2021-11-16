@@ -5,22 +5,22 @@
 
 class Demo {
 public:
-    Stack instanceStack(void){
+    stack::Stack instanceStack(void){
         return NULL;
     }
 
-    void popFromStack(Stack &stack) {
+    void popFromStack(stack::Stack &stack) {
         linkedList::Node *tmp = stack;
         stack = stack->getNextNode();
         delete tmp;
     }
 
-    void pushToStack(Stack &stack, std::string valTex = "", int valNum = 0) {
+    void pushToStack(stack::Stack &stack, std::string valTex = "", int valNum = 0) {
         linkedList::Node *newNode = new linkedList::Node(valTex, valNum, stack);
         stack = newNode;
     }
 
-    void freeStack(const Stack &stack) {
+    void freeStack(const stack::Stack &stack) {
         if (stack->getNextNode() != NULL) {
             this->freeStack(stack->getNextNode());
         }
@@ -36,7 +36,7 @@ public:
 int main(void) {
     Demo instanciador = Demo();
 
-    Stack stack = instanciador.instanceStack();
+    stack::Stack stack = instanciador.instanceStack();
 
     instanciador.pushToStack(stack, "1", 1);
     instanciador.pushToStack(stack, "2", 2);
