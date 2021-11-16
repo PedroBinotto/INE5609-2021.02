@@ -22,8 +22,4 @@ private:
 
 typedef Node *Stack;
 
-void pop(Stack &stack);
-void push(Stack &stack, std::string valTex, int valNum);
-void crawler(Stack &stack);
-
 #endif
