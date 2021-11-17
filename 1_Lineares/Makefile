@@ -1,15 +1,20 @@
 CC=g++
 
-# TODO: Reescrever Makefile para incluir as libs em compile-time
-
 SRCDIR=src
 BUILDDIR=obj
+BINDIR=bin
 
-all: $(BUILDDIR)/stack.o $(BUILDDIR)/linearQueue.o $(BUILDDIR)/circularQueue.o $(BUILDDIR)/linkedList.o $(BUILDDIR)/main.o
+all: build
 
-$(BUILDDIR)/%.o: $(SRCDIR)/%.cpp
-	$(CC) -o $@ $^
+build:
+	$(CC) -c $(SRCDIR)/linkedList.cpp -o $(BUILDDIR)/linkedList.o
+	$(CC) $(SRCDIR)/main.cpp $(BUILDDIR)/linkedList.o -o $(BINDIR)/main
 
 clean:
-	rm $(BUILDDIR)/*.o
+	rm $(BUILDDIR)/*.o $(BINDIR)/*
+
+# all: $(BUILDDIR)/stack.o $(BUILDDIR)/linearQueue.o $(BUILDDIR)/circularQueue.o $(BUILDDIR)/linkedList.o $(BUILDDIR)/main.o
+
+# $(BUILDDIR)/%.o: $(SRCDIR)/%.cpp
+# 	$(CC) -o $@ $^
 
