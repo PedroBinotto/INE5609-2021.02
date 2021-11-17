@@ -8,14 +8,14 @@ Queue *QueueService::instantiateQueue(void) {
     return new Queue;
 }
 
-void QueueService::enqueue(std::string valTex, int valNum, Queue *&queue) {
-    linkedList::Node *newNode = new linkedList::Node(valTex, valNum, queue->tail);
+void QueueService::enqueue(linkedList::Node *node, Queue *&queue) {
+    node->setNextNode(queue->tail);
     if (queue->tail != NULL) {
-        queue->tail->setPrevNode(newNode);
+        queue->tail->setPrevNode(node);
     }
-    queue->tail = newNode;
+    queue->tail = node;
     if (queue->head == NULL) {
-        queue->head = newNode;
+        queue->head = node;
     }
 }
 

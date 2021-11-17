@@ -4,14 +4,13 @@
 
 using namespace linkedList;
 
-Node::Node(std::string valTex, int valInt, Node *nextNode, Node *prevNode) {
+Node::Node(std::string valTex, int valNum, Node *nextNode, Node *prevNode) {
     text=valTex;
-    number=valInt;
+    number=valNum;
     next=nextNode;
     prev=prevNode;
 }
 
-// getters
 std::string Node::getValText(void) {
     return text;
 }
@@ -28,7 +27,6 @@ Node *Node::getPrevNode(void) {
     return prev;
 }
 
-// setters
 void Node::setValText(std::string valTex) {
     text = valTex;
 }
@@ -45,4 +43,8 @@ void Node::setPrevNode(Node *node) {
     prev = node;
 }
 
-
+Node *NodeFactory::instantiateNode(
+    std::string valTex,
+    int valNum) {
+    return new Node(valTex, valNum, NULL, NULL);
+}

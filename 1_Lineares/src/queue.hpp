@@ -12,7 +12,7 @@ namespace queue {
     class QueueService {
     public:
         Queue *instantiateQueue(void);
-        void enqueue(std::string valTex, int valNum, queue::Queue *&queue);
+        void enqueue(linkedList::Node *node, queue::Queue *&queue);
         void dequeue(Queue *&queue);
         void freeQueue(Queue *&queue);
     };

@@ -5,30 +5,30 @@
 #include "queue.hpp"
 
 int main(void) {
-    queue::QueueService qservice = queue::QueueService();
+    linkedList::NodeFactory nodeFactory = linkedList::NodeFactory();
+
+    queue::QueueService queueService = queue::QueueService();
     stack::StackService stackService = stack::StackService();
 
     stack::Stack stack = stackService.instantiateStack();
-    queue::Queue *q = qservice.instantiateQueue();
+    queue::Queue *queue = queueService.instantiateQueue();
 
-    stackService.pushToStack(stack, "1", 1);
-    stackService.pushToStack(stack, "2", 2);
-    stackService.pushToStack(stack, "3", 3);
-    stackService.pushToStack(stack, "4", 4);
-    stackService.popFromStack(stack);
+    for (int i = 0; i < 20; i++) {
+        linkedList::Node *node = nodeFactory.instantiateNode("lmao", i);
+        stackService.pushToStack(stack, node);
+    }
+
+    for (int i = 0; i < 20; i++) {
+        linkedList::Node *node = nodeFactory.instantiateNode("kekw", i);
+        queueService.enqueue(node, queue);
+    }
+
+    std::cout << queue->tail->getValNum() << std::endl;
+    std::cout << queue->head->getValNum() << std::endl;
+    std::cout << queue->head->getValNum() << std::endl;
+
     stackService.freeStack(stack);
-
-    qservice.enqueue("lol", 1, q);
-    qservice.enqueue("lol", 2, q);
-    qservice.enqueue("lol", 3, q);
-    qservice.enqueue("lol", 4, q);
-
-    std::cout << q->tail->getValNum() << std::endl;
-    std::cout << q->head->getValNum() << std::endl;
-    std::cout << q->head->getValNum() << std::endl;
-
-     qservice.freeQueue(q);
-
+    queueService.freeQueue(queue);
     return 0;
 }
 

@@ -14,14 +14,14 @@ void StackService::popFromStack(Stack &stack) {
     delete tmp;
 }
 
-void StackService::pushToStack(Stack &stack, std::string valTex, int valNum) {
-    linkedList::Node *newNode = new linkedList::Node(valTex, valNum, stack);
-    stack = newNode;
+void StackService::pushToStack(Stack &stack, linkedList::Node *node) {
+    node->setNextNode(stack);
+    stack = node;
 }
 
-void StackService::freeStack(const Stack &stack) {
-    if (stack->getNextNode() != NULL) {
-        this->freeStack(stack->getNextNode());
+void StackService::freeStack(Stack &stack) {
+    while (stack != NULL) {
+        this->popFromStack(stack);
     }
     delete stack;
 }

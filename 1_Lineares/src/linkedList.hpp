@@ -8,7 +8,7 @@ namespace linkedList {
     public:
         Node(
             std::string valTex="",
-            int valInt=0,
+            int valNum=0,
             Node *nextNode=NULL,
             Node *prevNode=NULL);
 
@@ -26,6 +26,13 @@ namespace linkedList {
         int number;
         Node *next;
         Node *prev;
+    };
+
+    class NodeFactory {
+    public:
+        Node *instantiateNode(
+            std::string valTex="",
+            int valNum=0);
     };
 }
 

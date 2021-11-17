@@ -10,8 +10,8 @@ namespace stack {
     public:
         Stack instantiateStack(void);
         void popFromStack(Stack &stack);
-        void pushToStack(Stack &stack, std::string valTex = "", int valNum = 0);
-        void freeStack(const Stack &stack);
+        void pushToStack(Stack &stack, linkedList::Node *node);
+        void freeStack(Stack &stack);
     };
 }
 
