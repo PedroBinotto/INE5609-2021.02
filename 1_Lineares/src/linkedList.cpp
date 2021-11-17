@@ -22,3 +22,15 @@ Node *Node::getNextNode(void) {
     return next;
 }
 
+void Node::setValText(std::string valTex) {
+    text = valTex;
+}
+
+void Node::setValNum(int valNum) {
+    number = valNum;
+}
+
+void Node::setNextNode(Node *node) {
+    next = node;
+}
+

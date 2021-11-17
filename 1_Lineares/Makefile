@@ -8,7 +8,9 @@ all: build
 
 build:
 	$(CC) -c $(SRCDIR)/linkedList.cpp -o $(BUILDDIR)/linkedList.o
-	$(CC) $(SRCDIR)/main.cpp $(BUILDDIR)/linkedList.o -o $(BINDIR)/main
+	$(CC) -c $(SRCDIR)/queue.cpp -o $(BUILDDIR)/queue.o
+	$(CC) -c $(SRCDIR)/main.cpp -o $(BUILDDIR)/main.o
+	$(CC) $(BUILDDIR)/main.o $(BUILDDIR)/queue.o $(BUILDDIR)/linkedList.o -o $(BINDIR)/main
 
 clean:
 	rm $(BUILDDIR)/*.o $(BINDIR)/*

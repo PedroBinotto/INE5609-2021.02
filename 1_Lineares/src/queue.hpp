@@ -3,11 +3,16 @@
 
 #include "linkedList.hpp"
 
-namespace queue {
-    typedef struct Queue {
-        linkedList::Node *head;
-        linkedList::Node *tail;
-    } Queue;
-}
+typedef struct Queue {
+    linkedList::Node *head;
+    linkedList::Node *tail;
+} Queue;
+
+Queue *instantiateQueue(void);
+void enqueue(std::string valTex, int valNum, Queue *&queue);
 
 #endif
+
+/* void dequeue(Queue *&queue); */
+/* void freeQueue(Queue *queue); */
+
