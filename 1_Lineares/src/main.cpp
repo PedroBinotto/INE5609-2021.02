@@ -4,54 +4,30 @@
 #include "stack.hpp"
 #include "queue.hpp"
 
-class Demo {
-public:
-    stack::Stack instantiateStack(void) {
-        return NULL;
-    }
-
-    void popFromStack(stack::Stack &stack) {
-        linkedList::Node *tmp = stack;
-        stack = stack->getNextNode();
-        delete tmp;
-    }
-
-    void pushToStack(stack::Stack &stack, std::string valTex = "", int valNum = 0) {
-        linkedList::Node *newNode = new linkedList::Node(valTex, valNum, stack);
-        stack = newNode;
-    }
-
-    void freeStack(const stack::Stack &stack) {
-        if (stack->getNextNode() != NULL) {
-            this->freeStack(stack->getNextNode());
-        }
-        delete stack;
-    }
-
-    // queue::Queue *instanceQueue()
-    // void enqueue()
-    // void dequeue()
-    // void freeQueue
-};
-
 int main(void) {
-    Demo instanciador = Demo();
+    queue::QueueService qservice = queue::QueueService();
+    stack::StackService stackService = stack::StackService();
 
-    stack::Stack stack = instanciador.instantiateStack();
+    stack::Stack stack = stackService.instantiateStack();
+    queue::Queue *q = qservice.instantiateQueue();
 
-    instanciador.pushToStack(stack, "1", 1);
-    instanciador.pushToStack(stack, "2", 2);
-    instanciador.pushToStack(stack, "3", 3);
-    instanciador.pushToStack(stack, "4", 4);
+    stackService.pushToStack(stack, "1", 1);
+    stackService.pushToStack(stack, "2", 2);
+    stackService.pushToStack(stack, "3", 3);
+    stackService.pushToStack(stack, "4", 4);
+    stackService.popFromStack(stack);
+    stackService.freeStack(stack);
 
-    instanciador.popFromStack(stack);
+    qservice.enqueue("lol", 1, q);
+    qservice.enqueue("lol", 2, q);
+    qservice.enqueue("lol", 3, q);
+    qservice.enqueue("lol", 4, q);
 
-    instanciador.freeStack(stack);
+    std::cout << q->tail->getValNum() << std::endl;
+    std::cout << q->head->getValNum() << std::endl;
+    std::cout << q->head->getValNum() << std::endl;
 
-    Queue *q = instantiateQueue();
-    enqueue("lol", 1, q);
-
-    std::cout << q->tail->getValText() << std::endl;
+     qservice.freeQueue(q);
 
     return 0;
 }
