@@ -19,11 +19,11 @@ O arquivo executável final encontra-se em `<PROJETO>/bin/main`.
 
 ```
 <PROJETO>
-├── bin             |  arquivos executáveis (binários)
-├── Makefile        |  
-├── obj             |  arquivos de build (libs estáticas)
-├── README.md       | 
-└── src             |  código fonte C++/headers
+├── bin -----------------> arquivos executáveis (binários)
+├── Makefile
+├── obj -----------------> arquivos de build (libs estáticas)
+├── README.md
+└── src -----------------> código fonte C++/headers
     ├── linkedList.cpp
     ├── linkedList.hpp
     ├── main.cpp

@@ -5,7 +5,7 @@
 
 class Demo {
 public:
-    stack::Stack instanceStack(void){
+    stack::Stack instanceStack(void) {
         return NULL;
     }
 
@@ -27,7 +27,7 @@ public:
         delete stack;
     }
 
-    // void instanceQueue()
+    // queue::Queue *instanceQueue()
     // void enqueue()
     // void dequeue()
     // void freeQueue
