@@ -1,5 +1,4 @@
 #include <string>
-#include <bits/stdc++.h>
 #include "linkedList.hpp"
 
 using namespace linkedList;
@@ -48,3 +47,4 @@ Node *NodeFactory::instantiateNode(
     int valNum) {
     return new Node(valTex, valNum, NULL, NULL);
 }
+

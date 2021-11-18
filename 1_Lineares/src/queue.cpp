@@ -1,5 +1,4 @@
 #include <string>
-#include <bits/stdc++.h>
 #include "queue.hpp"
 
 using namespace queue;

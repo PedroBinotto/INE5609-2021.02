@@ -21,7 +21,7 @@ O arquivo executável final encontra-se em `<PROJETO>/bin/main`.
 <PROJETO>
 ├── bin -----------------> arquivos executáveis (binários)
 ├── Makefile
-├── obj -----------------> arquivos de build (libs estáticas)
+├── obj -----------------> arquivos de build (arquivos *.o)
 ├── README.md
 └── src -----------------> código fonte C++/headers
     ├── linkedList.cpp
