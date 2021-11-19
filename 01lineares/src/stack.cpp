@@ -8,13 +8,14 @@ Stack StackFactory::newStack(void) {
     return (Stack) NULL;
 }
 
-void StackFactory::popFromStack(Stack &stack) {
+bool StackFactory::popFromStack(Stack &stack) {
     if (stack != NULL) {
         linkedList::Node *tmp = stack;
         stack = stack->getNextNode();
         delete tmp;
+        return true;
     } else {
-        std::cout << "STACK EMPTY" << std::endl;
+        return false;
     }
 }
 

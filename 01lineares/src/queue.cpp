@@ -19,17 +19,19 @@ void QueueFactory::enqueue(linkedList::Node *node, Queue *&queue) {
     queue->tail = node;
 }
 
-void QueueFactory::dequeue(Queue *&queue) {
+bool QueueFactory::dequeue(Queue *&queue) {
     if (queue != NULL) {
         linkedList::Node *tmp = queue->head;
         if (tmp != NULL) {
             queue->head = tmp->getPrevNode();
         } else {
-            std::cout << "QUEUE EMPTY" << std::endl;
+            return false;
         }
         queue->head->setNextNode(NULL);
         delete tmp;
+        return true;
     }
+    return false;
 }
 
 void QueueFactory::freeQueue(Queue *&queue) {

@@ -13,7 +13,7 @@ namespace queue {
     public:
         static Queue *newQueue(void);
         static void enqueue(linkedList::Node *node, queue::Queue *&queue);
-        static void dequeue(Queue *&queue);
+        static bool dequeue(Queue *&queue);
         static void freeQueue(Queue *&queue);
     };
 }

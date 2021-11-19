@@ -9,7 +9,7 @@ namespace stack {
     class StackFactory {
     public:
         static Stack newStack(void);
-        static void popFromStack(Stack &stack);
+        static bool popFromStack(Stack &stack);
         static void pushToStack(Stack &stack, linkedList::Node *node);
         static void freeStack(Stack &stack);
     };
@@ -17,4 +17,3 @@ namespace stack {
 
 #endif
 
-// TODO: tornar estático(s)
