@@ -5,7 +5,7 @@
 using namespace stack;
 
 Stack StackService::newStack(void) {
-    return NULL;
+    return (Stack) NULL;
 }
 
 void StackService::popFromStack(Stack &stack) {
