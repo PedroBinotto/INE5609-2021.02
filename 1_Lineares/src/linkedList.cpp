@@ -48,3 +48,11 @@ Node *NodeFactory::instantiateNode(
     return new Node(valTex, valNum, NULL, NULL);
 }
 
+
+void NodeFactory::freeList(Node *list) {
+    if (list != NULL && list->getNextNode() != NULL) {
+        freeList(list->getNextNode());
+    }
+    delete list;
+}
+

@@ -19,9 +19,7 @@ void StackService::pushToStack(Stack &stack, linkedList::Node *node) {
 }
 
 void StackService::freeStack(Stack &stack) {
-    while (stack != NULL) {
-        this->popFromStack(stack);
-    }
+    linkedList::NodeFactory::freeList(stack);
     delete stack;
 }
 

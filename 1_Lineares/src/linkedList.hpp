@@ -33,6 +33,8 @@ namespace linkedList {
         Node *instantiateNode(
             std::string valTex="",
             int valNum=0);
+
+        static void freeList(Node *list);
     };
 }
 

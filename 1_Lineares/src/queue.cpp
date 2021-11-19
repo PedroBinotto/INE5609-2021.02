@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include "queue.hpp"
 
 using namespace queue;
@@ -12,10 +13,10 @@ void QueueService::enqueue(linkedList::Node *node, Queue *&queue) {
     if (queue->tail != NULL) {
         queue->tail->setPrevNode(node);
     }
-    queue->tail = node;
     if (queue->head == NULL) {
         queue->head = node;
     }
+    queue->tail = node;
 }
 
 void QueueService::dequeue(Queue *&queue) {
@@ -23,13 +24,12 @@ void QueueService::dequeue(Queue *&queue) {
     if (tmp != NULL) {
         queue->head = tmp->getPrevNode();
     }
+    queue->head->setNextNode(NULL);
     delete tmp;
 }
 
 void QueueService::freeQueue(Queue *&queue) {
-    while (queue->head != NULL) {
-        this->dequeue(queue);
-    }
+    linkedList::NodeFactory::freeList(queue->tail);
     delete queue;
 }
 

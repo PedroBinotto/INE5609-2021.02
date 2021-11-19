@@ -17,3 +17,4 @@ namespace stack {
 
 #endif
 
+// TODO: tornar estático(s)
