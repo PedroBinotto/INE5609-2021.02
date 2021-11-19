@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include "linkedList.hpp"
 
 using namespace linkedList;
@@ -50,9 +51,10 @@ Node *NodeFactory::instantiateNode(
 
 
 void NodeFactory::freeList(Node *list) {
-    if (list != NULL && list->getNextNode() != NULL) {
+    if (list != NULL) {
         freeList(list->getNextNode());
+        delete list;
+        list = NULL;
     }
-    delete list;
 }
 

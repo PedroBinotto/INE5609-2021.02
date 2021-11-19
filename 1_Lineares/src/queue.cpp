@@ -20,16 +20,21 @@ void QueueService::enqueue(linkedList::Node *node, Queue *&queue) {
 }
 
 void QueueService::dequeue(Queue *&queue) {
-    linkedList::Node *tmp = queue->head;
-    if (tmp != NULL) {
-        queue->head = tmp->getPrevNode();
+    if (queue != NULL) {
+        linkedList::Node *tmp = queue->head;
+        if (tmp != NULL) {
+            queue->head = tmp->getPrevNode();
+        } else {
+            std::cout << "QUEUE EMPTY" << std::endl;
+        }
+        queue->head->setNextNode(NULL);
+        delete tmp;
     }
-    queue->head->setNextNode(NULL);
-    delete tmp;
 }
 
 void QueueService::freeQueue(Queue *&queue) {
     linkedList::NodeFactory::freeList(queue->tail);
     delete queue;
+    queue = NULL;
 }
 

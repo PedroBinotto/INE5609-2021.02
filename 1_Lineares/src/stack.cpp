@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include "stack.hpp"
 
 using namespace stack;
@@ -8,9 +9,13 @@ Stack StackService::instantiateStack(void) {
 }
 
 void StackService::popFromStack(Stack &stack) {
-    linkedList::Node *tmp = stack;
-    stack = stack->getNextNode();
-    delete tmp;
+    if (stack != NULL) {
+        linkedList::Node *tmp = stack;
+        stack = stack->getNextNode();
+        delete tmp;
+    } else {
+        std::cout << "STACK EMPTY" << std::endl;
+    }
 }
 
 void StackService::pushToStack(Stack &stack, linkedList::Node *node) {
@@ -20,6 +25,5 @@ void StackService::pushToStack(Stack &stack, linkedList::Node *node) {
 
 void StackService::freeStack(Stack &stack) {
     linkedList::NodeFactory::freeList(stack);
-    delete stack;
 }
 
