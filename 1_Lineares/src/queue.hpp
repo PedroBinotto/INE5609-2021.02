@@ -9,7 +9,7 @@ namespace queue {
         linkedList::Node *tail;
     } Queue;
 
-    class QueueService {
+    class QueueFactory {
     public:
         static Queue *newQueue(void);
         static void enqueue(linkedList::Node *node, queue::Queue *&queue);

@@ -4,11 +4,11 @@
 
 using namespace stack;
 
-Stack StackService::newStack(void) {
+Stack StackFactory::newStack(void) {
     return (Stack) NULL;
 }
 
-void StackService::popFromStack(Stack &stack) {
+void StackFactory::popFromStack(Stack &stack) {
     if (stack != NULL) {
         linkedList::Node *tmp = stack;
         stack = stack->getNextNode();
@@ -18,12 +18,12 @@ void StackService::popFromStack(Stack &stack) {
     }
 }
 
-void StackService::pushToStack(Stack &stack, linkedList::Node *node) {
+void StackFactory::pushToStack(Stack &stack, linkedList::Node *node) {
     node->setNextNode(stack);
     stack = node;
 }
 
-void StackService::freeStack(Stack &stack) {
+void StackFactory::freeStack(Stack &stack) {
     linkedList::NodeFactory::freeList(stack);
 }
 

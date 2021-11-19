@@ -6,7 +6,7 @@
 namespace stack {
     typedef linkedList::Node *Stack;
 
-    class StackService {
+    class StackFactory {
     public:
         static Stack newStack(void);
         static void popFromStack(Stack &stack);

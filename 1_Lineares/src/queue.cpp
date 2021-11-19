@@ -4,11 +4,11 @@
 
 using namespace queue;
 
-Queue *QueueService::newQueue(void) {
+Queue *QueueFactory::newQueue(void) {
     return new Queue;
 }
 
-void QueueService::enqueue(linkedList::Node *node, Queue *&queue) {
+void QueueFactory::enqueue(linkedList::Node *node, Queue *&queue) {
     node->setNextNode(queue->tail);
     if (queue->tail != NULL) {
         queue->tail->setPrevNode(node);
@@ -19,7 +19,7 @@ void QueueService::enqueue(linkedList::Node *node, Queue *&queue) {
     queue->tail = node;
 }
 
-void QueueService::dequeue(Queue *&queue) {
+void QueueFactory::dequeue(Queue *&queue) {
     if (queue != NULL) {
         linkedList::Node *tmp = queue->head;
         if (tmp != NULL) {
@@ -32,7 +32,7 @@ void QueueService::dequeue(Queue *&queue) {
     }
 }
 
-void QueueService::freeQueue(Queue *&queue) {
+void QueueFactory::freeQueue(Queue *&queue) {
     linkedList::NodeFactory::freeList(queue->tail);
     delete queue;
     queue = NULL;
