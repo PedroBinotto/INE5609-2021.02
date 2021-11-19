@@ -26,5 +26,6 @@ void StackFactory::pushToStack(Stack &stack, linkedList::Node *node) {
 
 void StackFactory::freeStack(Stack &stack) {
     linkedList::NodeFactory::freeList(stack);
+    stack = NULL;
 }
 

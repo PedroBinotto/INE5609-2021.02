@@ -21,7 +21,7 @@ int main(void) {
         queue::QueueFactory::enqueue(node, queue); 
     } 
 
-    for (int i = 0; i < 50; i++) { 
+    for (int i = 0; i < 200; i++) { 
         // lendo e removendo parte dos elementos da pilha (pop) 
         std::cout << "NODE: {" << stack->getValText() << " ; "; 
         std::cout << stack->getValNum() << "};\n" << std::endl; 
@@ -38,6 +38,8 @@ int main(void) {
     // dealocando estruturas e elementos remanescentes 
     stack::StackFactory::freeStack(stack); 
     queue::QueueFactory::freeQueue(queue); 
+
+    queue::QueueFactory::dequeue(queue); 
 
     return 0;
 }
