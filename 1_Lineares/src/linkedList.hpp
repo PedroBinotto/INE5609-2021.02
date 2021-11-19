@@ -30,7 +30,7 @@ namespace linkedList {
 
     class NodeFactory {
     public:
-        Node *instantiateNode(
+        static Node *newNode(
             std::string valTex="",
             int valNum=0);
 

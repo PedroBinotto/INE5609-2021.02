@@ -11,10 +11,10 @@ namespace queue {
 
     class QueueService {
     public:
-        Queue *instantiateQueue(void);
-        void enqueue(linkedList::Node *node, queue::Queue *&queue);
-        void dequeue(Queue *&queue);
-        void freeQueue(Queue *&queue);
+        static Queue *newQueue(void);
+        static void enqueue(linkedList::Node *node, queue::Queue *&queue);
+        static void dequeue(Queue *&queue);
+        static void freeQueue(Queue *&queue);
     };
 }
 

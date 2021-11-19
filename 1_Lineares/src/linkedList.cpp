@@ -43,7 +43,7 @@ void Node::setPrevNode(Node *node) {
     prev = node;
 }
 
-Node *NodeFactory::instantiateNode(
+Node *NodeFactory::newNode(
     std::string valTex,
     int valNum) {
     return new Node(valTex, valNum, NULL, NULL);

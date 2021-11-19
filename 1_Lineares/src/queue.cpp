@@ -4,7 +4,7 @@
 
 using namespace queue;
 
-Queue *QueueService::instantiateQueue(void) {
+Queue *QueueService::newQueue(void) {
     return new Queue;
 }
 

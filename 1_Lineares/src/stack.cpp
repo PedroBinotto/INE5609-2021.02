@@ -4,7 +4,7 @@
 
 using namespace stack;
 
-Stack StackService::instantiateStack(void) {
+Stack StackService::newStack(void) {
     return NULL;
 }
 

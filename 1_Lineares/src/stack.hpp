@@ -8,10 +8,10 @@ namespace stack {
 
     class StackService {
     public:
-        Stack instantiateStack(void);
-        void popFromStack(Stack &stack);
-        void pushToStack(Stack &stack, linkedList::Node *node);
-        void freeStack(Stack &stack);
+        static Stack newStack(void);
+        static void popFromStack(Stack &stack);
+        static void pushToStack(Stack &stack, linkedList::Node *node);
+        static void freeStack(Stack &stack);
     };
 }
 
