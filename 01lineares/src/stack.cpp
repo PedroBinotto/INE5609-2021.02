@@ -11,7 +11,9 @@ Stack StackFactory::newStack(void) {
 bool StackFactory::popFromStack(Stack &stack) {
     if (stack != NULL) {
         linkedList::Node *tmp = stack;
-        stack = stack->getNextNode();
+        stack = stack->getNextNode() != NULL
+            ? stack->getNextNode()
+            : NULL;
         delete tmp;
         return true;
     } else {
