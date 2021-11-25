@@ -99,7 +99,7 @@ namespace dll {
         /**
          * Documentation block for method
          */
-        bool isFull(void);           // ?? nao faco ideia do que seja
+        bool isFull(void);
 
         /**
          * Documentation block for method
