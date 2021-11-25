@@ -10,4 +10,19 @@
  * Contact: joao.ziliotto@grad.ufsc.br
  */
 
+#include "cursor.hpp"
+
+using namespace dll;
+
+// TODO: impl
+
+Cursor::Cursor(Node *listHead) { }
+
+void Cursor::proceedNPositions(int n) { } 
+void Cursor::regressNPositions(int n) { }
+
+void Cursor::goToHead(void) { }
+void Cursor::goToTail(void) { }
+
+Node *Cursor::getCurrentNode(void) { }
 

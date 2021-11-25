@@ -10,3 +10,16 @@
  * Contact: joao.ziliotto@grad.ufsc.br
  */
 
+#include "node.hpp"
+
+using namespace dll;
+
+Node::Node(Node *nextNode, Node *prevNode, int val) { }
+int Node::getValue(void) { }
+long Node::getKey(void) { }
+Node *Node::getPrevNode(void) { }
+Node *Node::getNextNode(void) { }
+void Node::setValue(int val) { }
+void Node::setPrevNode(Node *nextNode) { }
+void Node::setNextNode(Node *nextNode) { }
+

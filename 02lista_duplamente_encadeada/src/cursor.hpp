@@ -16,20 +16,43 @@
 #include "node.hpp"
 
 namespace dll {
+    /**
+     * Documentation block for class
+     */
     class Cursor {
     private:
         Node *current;
-
         bool regress(void);
         bool proceed(void);
     public:
+        /**
+         * Documentation block for method
+         */
         Cursor(Node *listHead);
 
+        /**
+         * Documentation block for method
+         */
         void proceedNPositions(int n);
+
+        /**
+         * Documentation block for method
+         */
         void regressNPositions(int n);
+
+        /**
+         * Documentation block for method
+         */
         void goToHead(void);
+
+        /**
+         * Documentation block for method
+         */
         void goToTail(void);
 
+        /**
+         * Documentation block for method
+         */
         Node *getCurrentNode(void);
     };
 }

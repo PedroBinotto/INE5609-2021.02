@@ -16,23 +16,55 @@
 #include <string>
 
 namespace dll {
+    /**
+     * Documentation block for class
+     */
     class Node {
-    public:
-        Node(Node *nextNode=NULL, Node *prevNode=NULL, int val=0);
-
-        int getValue(void);
-        long getKey(void);
-        Node *getPrevNode(void);
-        Node *getNextNode(void);
-
-        void setValue(int val);
-        void setPrevNode(Node *nextNode);
-        void setNextNode(Node *nextNode);
     private:
         long key;
         int value;
         Node *prev;
         Node *next;
+    public:
+        /**
+         * Documentation block for method
+         */
+        Node(Node *nextNode=NULL, Node *prevNode=NULL, int val=0);
+
+        /**
+         * Documentation block for method
+         */
+        int getValue(void);
+
+        /**
+         * Documentation block for method
+         */
+        long getKey(void);
+
+        /**
+         * Documentation block for method
+         */
+        Node *getPrevNode(void);
+
+        /**
+         * Documentation block for method
+         */
+        Node *getNextNode(void);
+
+        /**
+         * Documentation block for method
+         */
+        void setValue(int val);
+
+        /**
+         * Documentation block for method
+         */
+        void setPrevNode(Node *nextNode);
+
+        /**
+         * Documentation block for method
+         */
+        void setNextNode(Node *nextNode);
     };
 }
 
