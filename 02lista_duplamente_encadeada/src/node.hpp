@@ -59,7 +59,7 @@ namespace dll {
         /**
          * Documentation block for method
          */
-        void setPrevNode(Node *nextNode);
+        void setPrevNode(Node *prevNode);
 
         /**
          * Documentation block for method
