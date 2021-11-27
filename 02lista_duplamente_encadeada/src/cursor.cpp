@@ -18,6 +18,9 @@ using namespace dll;
 
 Cursor::Cursor(Node *listHead) { }
 
+bool Cursor::regress(void) { }
+bool Cursor::proceed(void) { }
+
 void Cursor::proceedNPositions(int n) { } 
 void Cursor::regressNPositions(int n) { }
 
