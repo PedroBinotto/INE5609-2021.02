@@ -21,6 +21,8 @@ long Node::getKey(void) { }
 Node *Node::getPrevNode(void) { }
 Node *Node::getNextNode(void) { }
 
+long Node::generateNextKey(void) { }
+
 void Node::setValue(int val) { }
 void Node::setPrevNode(Node *nextNode) { }
 void Node::setNextNode(Node *nextNode) { }

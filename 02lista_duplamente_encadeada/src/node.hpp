@@ -25,6 +25,9 @@ namespace dll {
         int value;
         Node *prev;
         Node *next;
+
+        static long nextId;
+        static long generateNextKey(void);
     public:
         /**
          * Documentation block for method
