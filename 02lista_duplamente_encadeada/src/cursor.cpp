@@ -16,7 +16,9 @@ using namespace dll;
 
 // TODO: impl
 
-Cursor::Cursor(Node *listHead) { }
+Cursor::Cursor(Node *listHead) {
+    current = listHead;
+}
 
 bool Cursor::regress(void) { }
 bool Cursor::proceed(void) { }

@@ -24,7 +24,6 @@ namespace dll {
         Cursor cursor;
         Node *head;
         Node *tail;
-        long counter;
     public:
         /**
          * Documentation block for method

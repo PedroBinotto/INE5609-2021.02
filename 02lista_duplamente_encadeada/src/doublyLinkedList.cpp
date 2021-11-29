@@ -16,7 +16,11 @@ using namespace dll;
 
 // TODO: impl
 
-DoublyLinkedList::DoublyLinkedList(void) { }
+DoublyLinkedList::DoublyLinkedList(void) {
+    head = NULL;
+    tail = NULL;
+    cursor = Cursor(head);
+}
 Node *getCurrentNode(void);
 
 void DoublyLinkedList::insertBeforeCurrent(Node *node) { }

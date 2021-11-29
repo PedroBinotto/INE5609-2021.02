@@ -28,7 +28,7 @@ namespace dll {
         /**
          * Documentation block for method
          */
-        Cursor(Node *listHead);
+        Cursor(Node *listHead=NULL);
 
         /**
          * Documentation block for method
