@@ -56,11 +56,11 @@ void Cursor::regressNPositions(int n) {
 	}
 }
 
-void Cursor::goToHead(void) { while (regress()) {}} // TODO: setar current pra (this.)(*head)
+void Cursor::goToHead(void) { current = (*head); }
 void Cursor::goToTail(void) { while (proceed()) {}} 
 
 Node *Cursor::getCurrentNode(void) { return current;}
 
-void Cursor::setCurrentToNull(void) { }
+void Cursor::setCurrentToNull(void) { current = NULL; }
 
 
