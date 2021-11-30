@@ -22,9 +22,10 @@ namespace dll {
     class DoublyLinkedList {
     private:
         Cursor cursor;
-        Node *head;
-        Node *tail;
-        long counter;
+        Node **head;
+        Node **tail;
+
+        // TODO: implementar destructor -> freeList(void)->[tambem por fazer]
     public:
         /**
          * Documentation block for method

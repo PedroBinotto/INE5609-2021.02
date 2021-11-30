@@ -18,7 +18,10 @@ using namespace dll;
 
 // TODO: impl
 
-Cursor::Cursor(Node *listHead) { }
+Cursor::Cursor(Node *listHead) {
+    head = &listHead;
+    current = listHead;
+}
 
 bool Cursor::regress(void) { 
 	if (current->getPrevNode() != NULL) {	
@@ -57,3 +60,7 @@ void Cursor::goToHead(void) { while (regress()) {}} // TODO: setar current pra (
 void Cursor::goToTail(void) { while (proceed()) {}} 
 
 Node *Cursor::getCurrentNode(void) { return current;}
+
+void Cursor::setCurrentToNull(void) { }
+
+
