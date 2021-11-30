@@ -94,6 +94,7 @@ void DoublyLinkedList::insertAtIndex(long index, Node *node) {
 }
 
 void DoublyLinkedList::removeCurrent(void) {
+    // TODO: possivelmente refatorar e revisar oqq acontece caso a lista so tenha tipo um ou dois caras
     Node *current = cursor.getCurrentNode();
     Node *prev = current->getPrevNode();
     Node *next = current->getNextNode();
@@ -104,6 +105,8 @@ void DoublyLinkedList::removeCurrent(void) {
     } else if (next != NULL) {
         cursor.proceedNPositions(1);
     } else {
+        (*head) = NULL;
+        (*tail) = NULL;
         cursor.setCurrentToNull();
     }
 
@@ -114,14 +117,22 @@ void DoublyLinkedList::removeCurrent(void) {
     delete current;
 }
 
-void DoublyLinkedList::removeFirst(void) { }
-void DoublyLinkedList::removeLast(void) { }
+void DoublyLinkedList::removeFirst(void) {
+    // FIXME: isso aq nem ta pronto
+    if ((*head) == NULL) { return; }
+    Node *next = cursor.getCurrentNode()->getNextNode();
+    Node *second = (*head)->getNextNode();
+    delete (*head);
+}
+void DoublyLinkedList::removeLast(void) {
+    
+}
 
 void DoublyLinkedList::removeByKey(long key) { }
 void DoublyLinkedList::removeFromIndex(long index) { }
 
 bool DoublyLinkedList::search(long key) { }
-bool DoublyLinkedList::isEmpty(void) { }
-bool DoublyLinkedList::isFull(void) { }           // ?? nao faco ideia do que seja
+bool DoublyLinkedList::isEmpty(void) { return (*head) == NULL; }
+bool DoublyLinkedList::isFull(void) { return false; }           // ?? nao faco ideia do que seja
 long DoublyLinkedList::getIndexByKey(long key) { }
 
