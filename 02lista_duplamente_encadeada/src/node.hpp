@@ -71,5 +71,7 @@ namespace dll {
     };
 }
 
+// TODO: implementar NodeFactory
+
 #endif
 

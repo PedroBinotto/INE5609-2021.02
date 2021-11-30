@@ -24,6 +24,8 @@ namespace dll {
         Cursor cursor;
         Node **head;
         Node **tail;
+
+        // TODO: implementar destructor -> freeList(void)->[tambem por fazer]
     public:
         /**
          * Documentation block for method

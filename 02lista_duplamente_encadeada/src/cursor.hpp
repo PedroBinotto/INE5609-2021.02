@@ -57,7 +57,7 @@ namespace dll {
          */
         Node *getCurrentNode(void);
 
-        void resetHead(Node *node);
+        void setCurrentToNull(void);
     };
 }
 
