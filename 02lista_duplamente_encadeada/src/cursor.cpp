@@ -31,5 +31,5 @@ void Cursor::goToHead(void) { }
 void Cursor::goToTail(void) { }
 
 Node *Cursor::getCurrentNode(void) { }
-void resetHead(Node *node) { }
+void Cursor::setCurrentToNull(void) { }
 
