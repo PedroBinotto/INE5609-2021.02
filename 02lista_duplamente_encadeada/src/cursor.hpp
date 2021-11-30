@@ -21,7 +21,9 @@ namespace dll {
      */
     class Cursor {
     private:
+        Node **head;
         Node *current;
+
         bool regress(void);
         bool proceed(void);
     public:
@@ -54,6 +56,8 @@ namespace dll {
          * Documentation block for method
          */
         Node *getCurrentNode(void);
+
+        void resetHead(Node *node);
     };
 }
 

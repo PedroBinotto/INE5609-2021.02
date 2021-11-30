@@ -17,6 +17,7 @@ using namespace dll;
 // TODO: impl
 
 Cursor::Cursor(Node *listHead) {
+    head = &listHead;
     current = listHead;
 }
 
@@ -30,4 +31,5 @@ void Cursor::goToHead(void) { }
 void Cursor::goToTail(void) { }
 
 Node *Cursor::getCurrentNode(void) { }
+void resetHead(Node *node) { }
 

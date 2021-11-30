@@ -22,8 +22,8 @@ namespace dll {
     class DoublyLinkedList {
     private:
         Cursor cursor;
-        Node *head;
-        Node *tail;
+        Node **head;
+        Node **tail;
     public:
         /**
          * Documentation block for method
