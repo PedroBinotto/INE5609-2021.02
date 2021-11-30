@@ -18,26 +18,12 @@ Node::Node(Node *nextNode, Node *prevNode, int val) {
 
 }
 
-int Node::getValue(void) { 
-	return value;
-}
-long Node::getKey(void) { 
-	return key;
-}
-Node *Node::getPrevNode(void) { 
-	return prev;
-}
-Node *Node::getNextNode(void) { 
-	return next;
-}
+int Node::getValue(void) { return value;}
+long Node::getKey(void) { return key;}
+Node *Node::getPrevNode(void) { return prev;}
+Node *Node::getNextNode(void) { return next;}
 
-void Node::setValue(int val) { 
-	value = val;
-}
-void Node::setPrevNode(Node *prevNode) { 
-	prev = prevNode;
-}
-void Node::setNextNode(Node *nextNode) { 
-	next = nextNode;
-}
+void Node::setValue(int val) { value = val;}
+void Node::setPrevNode(Node *prevNode) { prev = prevNode;}
+void Node::setNextNode(Node *nextNode) { next = nextNode;}
 

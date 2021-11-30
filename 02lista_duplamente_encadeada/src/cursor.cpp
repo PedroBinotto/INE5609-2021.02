@@ -21,16 +21,14 @@ using namespace dll;
 Cursor::Cursor(Node *listHead) { }
 
 bool Cursor::regress(void) { 
-	if (current->getPrevNode() != NULL)
-	{	
+	if (current->getPrevNode() != NULL) {	
 		current = current->getPrevNode();
 		return true;
 	}
 	return false;
 }
 bool Cursor::proceed(void) { 
-	if (current->getNextNode() != NULL)
-	{
+	if (current->getNextNode() != NULL) {
 		current = current->getNextNode();
 		return true;
 	}
@@ -38,27 +36,24 @@ bool Cursor::proceed(void) {
 }
 
 void Cursor::proceedNPositions(int n) { 
-	for (int i = 0; i < n; i++)
-	{
-		if (!proceed())
-		{
+	for (int i = 0; i < n; i++){
+		if (!proceed()){
 			std::cout << "ow seu banzo!" << std::endl;
 			break;
 		}
 	}
 } 
+
 void Cursor::regressNPositions(int n) { 
-
+	for (int i = 0; i < n; i++) {
+		if (!regress()) {
+			std::cout << "ow seu banzo!" << std::endl;
+			break;
+		}
+	}
 }
 
-void Cursor::goToHead(void) { 
+void Cursor::goToHead(void) { while (regress()) {}}
+void Cursor::goToTail(void) { while (proceed()) {}}
 
-}
-void Cursor::goToTail(void) { 
-
-}
-
-Node *Cursor::getCurrentNode(void) { 
-	return current;
-}
-
+Node *Cursor::getCurrentNode(void) { return current;}
