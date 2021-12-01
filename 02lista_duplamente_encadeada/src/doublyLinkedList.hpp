@@ -81,12 +81,26 @@ namespace dll {
         void insertLast(Node *node);
 
         /**
-         * Documentation block for method
+         * Metodo que permite inserir um elemento em dada posicao da lista
+         *     com base em um indice
+         *
+         * @note Em caso de uma lista vazia, o elemento sera adicionado as
+         *     posicoes HEAD e TAIL
+         * @param index Indice numerico (base zero) representativo da
+         *     posicao na lista onde o sera inserido
+         * @param node Elemento a ser adicionado a lista
          */
         void insertAtIndex(long index, Node *node);
 
         /**
-         * Documentation block for method
+         * Metodo que permite remover o elemento atual para o qual o cursor
+         *     da lista esta apontando
+         *
+         * @note O cursor sera movido para a posicao anterior na lista ao
+         *     remover o elemento atual, HEAD em casos onde restam apenas
+         *     um elemento na lista, ou NULL se executado em uma lista com
+         *     apenas um elemento. Nao gerara excecoes se executado em uma
+         *     lista previamente vazia
          */
         void removeCurrent(void);
 
