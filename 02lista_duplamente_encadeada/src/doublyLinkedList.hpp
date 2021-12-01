@@ -24,6 +24,7 @@ namespace dll {
         Cursor cursor;
         Node **head;
         Node **tail;
+        void handleRemove(Node *node);
 
         // TODO: implementar destructor -> freeList(void)->[tambem por fazer]
     public:
