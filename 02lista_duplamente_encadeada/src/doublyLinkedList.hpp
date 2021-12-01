@@ -17,7 +17,7 @@
 
 namespace dll {
     /**
-     * Documentation block for class
+     * Classe representativa de uma lista duplamente encadeada
      */
     class DoublyLinkedList {
     private:

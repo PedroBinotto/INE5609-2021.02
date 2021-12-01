@@ -17,7 +17,7 @@
 
 namespace dll {
     /**
-     * Documentation block for class
+     * Classe representativa do cursor de uma lista encadeada
      */
     class Cursor {
     private:
@@ -28,35 +28,58 @@ namespace dll {
         bool proceed(void);
     public:
         /**
-         * Documentation block for method
+         * Construtor da classe (default constructor)
+         *
+         * @param listHead HEAD da lista a qual o objeto cursor pertence
          */
         Cursor(Node *listHead=NULL);
 
         /**
-         * Documentation block for method
+         * Move o cursor "n" posicoes em direcao a TAIL da lista
+         *
+         * @param n Numero de posicoes a avancar
+         * @note Cursor sera posicionado em TAIL caso o numero de
+         *     posicoes avancadas exceda o comprimento da lista
+         *     ou caso o metodo seja executado em uma lista que
+         *     encontra-se vazia
          */
         void proceedNPositions(int n);
 
         /**
-         * Documentation block for method
+         * Move o cursor "n" posicoes em direcao a HEAD da lista
+         *
+         * @param n Numero de posicoes a regredir
+         * @note Cursor sera posicionado em HEAD caso o numero de
+         *     posicoes regredidas exceda o comprimento da lista
+         *     ou caso o metodo seja executado em uma lista que
+         *     encontra-se vazia
          */
         void regressNPositions(int n);
 
         /**
-         * Documentation block for method
+         * Move o cursor para a posicao HEAD
          */
         void goToHead(void);
 
         /**
-         * Documentation block for method
+         * Move o cursor para a posicao TAIL
          */
         void goToTail(void);
 
         /**
-         * Documentation block for method
+         * Retorna o elemento atual para qual o cursor aponta.
+         *
+         * @returns Ponteiro para elemento atual ou NULL em caso
+         *     de uma lista que encontra-se vazia
          */
         Node *getCurrentNode(void);
 
+        /**
+         * Metodo privado.
+         *
+         * Atribui um ponteiro NULL para o atributo
+         *     interno do elemento atual 'current'
+         */
         void setCurrentToNull(void);
     };
 }
