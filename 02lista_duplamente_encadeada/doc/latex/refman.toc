@@ -1,0 +1,68 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}dll\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Cursor Class Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{5}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Cursor()}{5}{subsubsection.3.1.2.1}%
+\contentsline {subsection}{\numberline {3.1.3}Member Function Documentation}{6}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}getCurrentNode()}{6}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}goToHead()}{6}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}goToTail()}{6}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}proceedNPositions()}{6}{subsubsection.3.1.3.4}%
+\contentsline {subsubsection}{\numberline {3.1.3.5}regressNPositions()}{7}{subsubsection.3.1.3.5}%
+\contentsline {subsubsection}{\numberline {3.1.3.6}setCurrentToNull()}{7}{subsubsection.3.1.3.6}%
+\contentsline {section}{\numberline {3.2}dll\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Doubly\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List Class Reference}{7}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{8}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Constructor \& Destructor Documentation}{8}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}DoublyLinkedList()}{8}{subsubsection.3.2.2.1}%
+\contentsline {subsection}{\numberline {3.2.3}Member Function Documentation}{8}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}getCurrentNode()}{8}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}getIndexByKey()}{8}{subsubsection.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.3.3}insertAfterCurrent()}{9}{subsubsection.3.2.3.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.4}insertAtIndex()}{9}{subsubsection.3.2.3.4}%
+\contentsline {subsubsection}{\numberline {3.2.3.5}insertBeforeCurrent()}{10}{subsubsection.3.2.3.5}%
+\contentsline {subsubsection}{\numberline {3.2.3.6}insertFirst()}{10}{subsubsection.3.2.3.6}%
+\contentsline {subsubsection}{\numberline {3.2.3.7}insertLast()}{10}{subsubsection.3.2.3.7}%
+\contentsline {subsubsection}{\numberline {3.2.3.8}isEmpty()}{11}{subsubsection.3.2.3.8}%
+\contentsline {subsubsection}{\numberline {3.2.3.9}isFull()}{11}{subsubsection.3.2.3.9}%
+\contentsline {subsubsection}{\numberline {3.2.3.10}removeByKey()}{11}{subsubsection.3.2.3.10}%
+\contentsline {subsubsection}{\numberline {3.2.3.11}removeCurrent()}{11}{subsubsection.3.2.3.11}%
+\contentsline {subsubsection}{\numberline {3.2.3.12}removeFirst()}{12}{subsubsection.3.2.3.12}%
+\contentsline {subsubsection}{\numberline {3.2.3.13}removeFromIndex()}{12}{subsubsection.3.2.3.13}%
+\contentsline {subsubsection}{\numberline {3.2.3.14}removeLast()}{12}{subsubsection.3.2.3.14}%
+\contentsline {subsubsection}{\numberline {3.2.3.15}search()}{13}{subsubsection.3.2.3.15}%
+\contentsline {section}{\numberline {3.3}dll\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Node Class Reference}{13}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{13}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Constructor \& Destructor Documentation}{14}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Node()}{14}{subsubsection.3.3.2.1}%
+\contentsline {subsection}{\numberline {3.3.3}Member Function Documentation}{14}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}getKey()}{14}{subsubsection.3.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}getNextNode()}{14}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.3}getPrevNode()}{15}{subsubsection.3.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.4}getValue()}{15}{subsubsection.3.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.3.5}setNextNode()}{15}{subsubsection.3.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.3.6}setPrevNode()}{15}{subsubsection.3.3.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.3.7}setValue()}{16}{subsubsection.3.3.3.7}%
+\contentsline {chapter}{\numberline {4}File Documentation}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}src/cursor.cpp File Reference}{17}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{17}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}src/cursor.hpp File Reference}{17}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{17}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}cursor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{18}{section.4.3}%
+\contentsline {section}{\numberline {4.4}src/doubly\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List.cpp File Reference}{18}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{18}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}src/doubly\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List.hpp File Reference}{18}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{19}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}doubly\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{19}{section.4.6}%
+\contentsline {section}{\numberline {4.7}src/main.cpp File Reference}{20}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{20}{subsection.4.7.1}%
+\contentsline {section}{\numberline {4.8}src/node.cpp File Reference}{20}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{20}{subsection.4.8.1}%
+\contentsline {section}{\numberline {4.9}src/node.hpp File Reference}{20}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{21}{subsection.4.9.1}%
+\contentsline {section}{\numberline {4.10}node.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{21}{section.4.10}%
+\contentsline {chapter}{Index}{23}{section*.8}%

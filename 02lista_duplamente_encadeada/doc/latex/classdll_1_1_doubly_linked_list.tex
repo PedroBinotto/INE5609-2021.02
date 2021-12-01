@@ -1,0 +1,269 @@
+\hypertarget{classdll_1_1_doubly_linked_list}{}\doxysection{dll\+::Doubly\+Linked\+List Class Reference}
+\label{classdll_1_1_doubly_linked_list}\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+
+
+{\ttfamily \#include $<$doubly\+Linked\+List.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdll_1_1_doubly_linked_list_a695306449d00d906d6fd38c7e2d43c0a}{Doubly\+Linked\+List}} (void)
+\item 
+\mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classdll_1_1_doubly_linked_list_a9fd741ae798f861061bfd39b899c9b7e}{get\+Current\+Node}} (void)
+\item 
+void \mbox{\hyperlink{classdll_1_1_doubly_linked_list_a5dc5efcb2429b61144077af51745a233}{insert\+Before\+Current}} (\mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$node)
+\item 
+void \mbox{\hyperlink{classdll_1_1_doubly_linked_list_a1600ed2c23964c2b315831bf6ef35bbc}{insert\+After\+Current}} (\mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$node)
+\item 
+void \mbox{\hyperlink{classdll_1_1_doubly_linked_list_aec744874b97ddb4257a2068453a869a4}{insert\+First}} (\mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$node)
+\item 
+void \mbox{\hyperlink{classdll_1_1_doubly_linked_list_ad51273d76b435d201da9c04c708baba0}{insert\+Last}} (\mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$node)
+\item 
+void \mbox{\hyperlink{classdll_1_1_doubly_linked_list_ac30b8a357c34c81256d39b0156d3c5bf}{insert\+At\+Index}} (long index, \mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$node)
+\item 
+void \mbox{\hyperlink{classdll_1_1_doubly_linked_list_ae5e5b7542963a32131cc279014d5b6ad}{remove\+Current}} (void)
+\item 
+void \mbox{\hyperlink{classdll_1_1_doubly_linked_list_ab5dca402470bff36daf12759778f04ff}{remove\+First}} (void)
+\item 
+void \mbox{\hyperlink{classdll_1_1_doubly_linked_list_a882769d6976e8de65539ec4ae9ff1413}{remove\+Last}} (void)
+\item 
+void \mbox{\hyperlink{classdll_1_1_doubly_linked_list_a46269ba5c5aac854481870c5969bb4e0}{remove\+By\+Key}} (long key)
+\item 
+void \mbox{\hyperlink{classdll_1_1_doubly_linked_list_aaec2092c7414108db82b67b05de6d2e0}{remove\+From\+Index}} (long index)
+\item 
+bool \mbox{\hyperlink{classdll_1_1_doubly_linked_list_af9e7e3d342510a457a8a5e7f49cb1b10}{search}} (long key)
+\item 
+bool \mbox{\hyperlink{classdll_1_1_doubly_linked_list_a2afc4e47d014be8bdf0127186abaf615}{is\+Empty}} (void)
+\item 
+bool \mbox{\hyperlink{classdll_1_1_doubly_linked_list_a75421abb193adb3f1f3ca0252ab69daa}{is\+Full}} (void)
+\item 
+long \mbox{\hyperlink{classdll_1_1_doubly_linked_list_a391ae71cd87912180d371a834b8f552f}{get\+Index\+By\+Key}} (long key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe representativa de uma lista duplamente encadeada 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_a695306449d00d906d6fd38c7e2d43c0a}\label{classdll_1_1_doubly_linked_list_a695306449d00d906d6fd38c7e2d43c0a}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!DoublyLinkedList@{DoublyLinkedList}}
+\index{DoublyLinkedList@{DoublyLinkedList}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{DoublyLinkedList()}{DoublyLinkedList()}}
+{\footnotesize\ttfamily Doubly\+Linked\+List\+::\+Doubly\+Linked\+List (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Construtor da classe (no-\/args constructor) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_a9fd741ae798f861061bfd39b899c9b7e}\label{classdll_1_1_doubly_linked_list_a9fd741ae798f861061bfd39b899c9b7e}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!getCurrentNode@{getCurrentNode}}
+\index{getCurrentNode@{getCurrentNode}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{getCurrentNode()}{getCurrentNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$ Doubly\+Linked\+List\+::get\+Current\+Node (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Retorna elemento atual para qual o cursor da lista esta aponta
+
+\begin{DoxyReturn}{Returns}
+Ponteiro para nodo atual atribuido ao cursor ou NULL em caso de uma lista vazia 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_a391ae71cd87912180d371a834b8f552f}\label{classdll_1_1_doubly_linked_list_a391ae71cd87912180d371a834b8f552f}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!getIndexByKey@{getIndexByKey}}
+\index{getIndexByKey@{getIndexByKey}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{getIndexByKey()}{getIndexByKey()}}
+{\footnotesize\ttfamily long Doubly\+Linked\+List\+::get\+Index\+By\+Key (\begin{DoxyParamCaption}\item[{long}]{key }\end{DoxyParamCaption})}
+
+Metodo que retorna a chave de identificacao de um elemento com base em seu indice posicional dentro da lista encadeada
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Chave de identificacao numerica correspondente ao elemento desejado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Indice correspondente a posicao ocupada pelo elemento identificado pela chave \textquotesingle{}key\textquotesingle{}, caso presente na lista; caso contrario, \textquotesingle{}-\/1\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_a1600ed2c23964c2b315831bf6ef35bbc}\label{classdll_1_1_doubly_linked_list_a1600ed2c23964c2b315831bf6ef35bbc}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!insertAfterCurrent@{insertAfterCurrent}}
+\index{insertAfterCurrent@{insertAfterCurrent}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{insertAfterCurrent()}{insertAfterCurrent()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::insert\+After\+Current (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Metodo que permite inserir um nodo na posicao posterior ao atual elemento da lista para qual o cursor esta apontando
+
+\begin{DoxyNote}{Note}
+Elemento adicionado a posicao HEAD e TAIL no caso de uma lista vazia 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Elemento a ser adicionado a lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_ac30b8a357c34c81256d39b0156d3c5bf}\label{classdll_1_1_doubly_linked_list_ac30b8a357c34c81256d39b0156d3c5bf}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!insertAtIndex@{insertAtIndex}}
+\index{insertAtIndex@{insertAtIndex}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{insertAtIndex()}{insertAtIndex()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::insert\+At\+Index (\begin{DoxyParamCaption}\item[{long}]{index,  }\item[{\mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Metodo que permite inserir um elemento em dada posicao da lista com base em um indice
+
+\begin{DoxyNote}{Note}
+Em caso de uma lista vazia, o elemento sera adicionado as posicoes HEAD e TAIL 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indice numerico (base zero) representativo da posicao na lista onde o sera inserido \\
+\hline
+{\em node} & Elemento a ser adicionado a lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_a5dc5efcb2429b61144077af51745a233}\label{classdll_1_1_doubly_linked_list_a5dc5efcb2429b61144077af51745a233}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!insertBeforeCurrent@{insertBeforeCurrent}}
+\index{insertBeforeCurrent@{insertBeforeCurrent}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{insertBeforeCurrent()}{insertBeforeCurrent()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::insert\+Before\+Current (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Metodo que permite inserir um nodo na posicao anterior ao atual elemento da lista para qual o cursor esta apontando
+
+\begin{DoxyNote}{Note}
+Elemento adicionado a posicao HEAD e TAIL no caso de uma lista vazia 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Elemento a ser adicionado a lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_aec744874b97ddb4257a2068453a869a4}\label{classdll_1_1_doubly_linked_list_aec744874b97ddb4257a2068453a869a4}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!insertFirst@{insertFirst}}
+\index{insertFirst@{insertFirst}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{insertFirst()}{insertFirst()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::insert\+First (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Metodo que permite adicionar um elemento a primeira posicao (HEAD) da lista encadeada
+
+\begin{DoxyNote}{Note}
+Elemento sera adicionado a posicao HEAD e TAIL no caso de uma lista vazia 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Elemento a ser adicionado a lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_ad51273d76b435d201da9c04c708baba0}\label{classdll_1_1_doubly_linked_list_ad51273d76b435d201da9c04c708baba0}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!insertLast@{insertLast}}
+\index{insertLast@{insertLast}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{insertLast()}{insertLast()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::insert\+Last (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdll_1_1_node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Metodo que permite adicionar um elemento a ultima posicao (TAIL) da lista encadeada
+
+\begin{DoxyNote}{Note}
+Elemento sera adicionado a posicao HEAD e TAIL no caso de uma lista vazia 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Elemento a ser adicionado a lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_a2afc4e47d014be8bdf0127186abaf615}\label{classdll_1_1_doubly_linked_list_a2afc4e47d014be8bdf0127186abaf615}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Doubly\+Linked\+List\+::is\+Empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Metodo que permite checar se a lista esta vazia, ou seja, nao possui elemento nenhum no momento de execucao do metodo
+
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}true\textquotesingle{} caso a lista nao possua elementos, caso contrario, \textquotesingle{}false\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_a75421abb193adb3f1f3ca0252ab69daa}\label{classdll_1_1_doubly_linked_list_a75421abb193adb3f1f3ca0252ab69daa}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!isFull@{isFull}}
+\index{isFull@{isFull}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily bool Doubly\+Linked\+List\+::is\+Full (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+!!! EM CONSTRUCAO \mbox{\Hypertarget{classdll_1_1_doubly_linked_list_a46269ba5c5aac854481870c5969bb4e0}\label{classdll_1_1_doubly_linked_list_a46269ba5c5aac854481870c5969bb4e0}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!removeByKey@{removeByKey}}
+\index{removeByKey@{removeByKey}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{removeByKey()}{removeByKey()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::remove\+By\+Key (\begin{DoxyParamCaption}\item[{long}]{key }\end{DoxyParamCaption})}
+
+Metodo que permite remover (liberar) um elemento da lista com base na chave de identificacao unica do nodo
+
+\begin{DoxyNote}{Note}
+Nenhuma alteracao sera realizada se executado em uma chave invalida ou lista vazia 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Chave de identificacao numerica correspondente ao elemento que se deseja remover \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_ae5e5b7542963a32131cc279014d5b6ad}\label{classdll_1_1_doubly_linked_list_ae5e5b7542963a32131cc279014d5b6ad}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!removeCurrent@{removeCurrent}}
+\index{removeCurrent@{removeCurrent}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{removeCurrent()}{removeCurrent()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::remove\+Current (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Metodo que permite remover o elemento atual para o qual o cursor da lista esta apontando
+
+\begin{DoxyNote}{Note}
+O cursor sera movido para a posicao anterior na lista ao remover o elemento atual, HEAD em casos onde restam apenas um elemento na lista, ou NULL se executado em uma lista com apenas um elemento. Nao gerara excecoes se executado em uma lista previamente vazia 
+\end{DoxyNote}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_ab5dca402470bff36daf12759778f04ff}\label{classdll_1_1_doubly_linked_list_ab5dca402470bff36daf12759778f04ff}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!removeFirst@{removeFirst}}
+\index{removeFirst@{removeFirst}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{removeFirst()}{removeFirst()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::remove\+First (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Metodo que permite remover (liberar) o elemento na primeira posicao da lista
+
+\begin{DoxyNote}{Note}
+HEAD sera atribuido ao elemento seguinte na lista, ou NULL no caso do metodo ser executado em uma lista com um unico elemento. O mesmo comportamento aplica-\/se ao cursor caso este esteja apontando para o primeiro elemento da lista. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_aaec2092c7414108db82b67b05de6d2e0}\label{classdll_1_1_doubly_linked_list_aaec2092c7414108db82b67b05de6d2e0}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!removeFromIndex@{removeFromIndex}}
+\index{removeFromIndex@{removeFromIndex}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{removeFromIndex()}{removeFromIndex()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::remove\+From\+Index (\begin{DoxyParamCaption}\item[{long}]{index }\end{DoxyParamCaption})}
+
+Metodo que permite remover (liberar) um elemento da lista com base no indice posicional do nodo dentro da lista
+
+\begin{DoxyNote}{Note}
+Nenhuma alteracao sera realizada se executado em um indice invalido invalida ou lista vazia 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indice numerico (sequencial, base-\/zero) de identificacao correspondente a posicao na lista do elemento que se deseja remover \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_a882769d6976e8de65539ec4ae9ff1413}\label{classdll_1_1_doubly_linked_list_a882769d6976e8de65539ec4ae9ff1413}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!removeLast@{removeLast}}
+\index{removeLast@{removeLast}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{removeLast()}{removeLast()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::remove\+Last (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Metodo que permite remover (liberar) o elemento na ultima posicao da lista
+
+\begin{DoxyNote}{Note}
+TAIL sera atribuido ao elemento anterior na lista, ou NULL no caso do metodo ser executado em uma lista com um unico elemento. O mesmo comportamento aplica-\/se ao cursor caso este esteja apontando para o ultimo elemento da lista. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classdll_1_1_doubly_linked_list_af9e7e3d342510a457a8a5e7f49cb1b10}\label{classdll_1_1_doubly_linked_list_af9e7e3d342510a457a8a5e7f49cb1b10}} 
+\index{dll::DoublyLinkedList@{dll::DoublyLinkedList}!search@{search}}
+\index{search@{search}!dll::DoublyLinkedList@{dll::DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily bool Doubly\+Linked\+List\+::search (\begin{DoxyParamCaption}\item[{long}]{key }\end{DoxyParamCaption})}
+
+Metodo que permite buscar por um elemento em especifico na lista com base na chave unica de identificacao associada ao nodo em questao
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Chave de identificacao numerica correspondente ao elemento desejado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}true\textquotesingle{} se o elemento estiver presente na lista, caso contrario, \textquotesingle{}false\textquotesingle{} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{doubly_linked_list_8hpp}{doubly\+Linked\+List.\+hpp}}\item 
+src/\mbox{\hyperlink{doubly_linked_list_8cpp}{doubly\+Linked\+List.\+cpp}}\end{DoxyCompactItemize}

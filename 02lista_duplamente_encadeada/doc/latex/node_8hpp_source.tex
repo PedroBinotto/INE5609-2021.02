@@ -1,0 +1,47 @@
+\hypertarget{node_8hpp_source}{}\doxysection{node.\+hpp}
+\label{node_8hpp_source}\index{src/node.hpp@{src/node.hpp}}
+\mbox{\hyperlink{node_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef NODE\_H}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define NODE\_H}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{namespace }dll \{}
+\DoxyCodeLine{22     \textcolor{keyword}{class }\mbox{\hyperlink{classdll_1_1_node}{Node}} \{}
+\DoxyCodeLine{23     \textcolor{keyword}{private}:}
+\DoxyCodeLine{24         \textcolor{keywordtype}{long} key;}
+\DoxyCodeLine{25         \textcolor{keywordtype}{int} value;}
+\DoxyCodeLine{26         \mbox{\hyperlink{classdll_1_1_node}{Node}} *prev;}
+\DoxyCodeLine{27         \mbox{\hyperlink{classdll_1_1_node}{Node}} *next;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         \textcolor{keyword}{static} \textcolor{keywordtype}{long} nextId;}
+\DoxyCodeLine{30         \textcolor{keyword}{static} \textcolor{keywordtype}{long} generateNextKey(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{31     \textcolor{keyword}{public}:}
+\DoxyCodeLine{35         \mbox{\hyperlink{classdll_1_1_node_a248e6a9e2295260c1170304fa61a668f}{Node}}(\textcolor{keywordtype}{int} val=0, \mbox{\hyperlink{classdll_1_1_node}{Node}} *nextNode=NULL, \mbox{\hyperlink{classdll_1_1_node}{Node}} *prevNode=NULL);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{43         \textcolor{keywordtype}{int} \mbox{\hyperlink{classdll_1_1_node_a93d27ab2a381a94204ff4ee1855b9455}{getValue}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{51         \textcolor{keywordtype}{long} \mbox{\hyperlink{classdll_1_1_node_a0cfb586fb2847cc165a2fb2698d8a0bb}{getKey}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{60         \mbox{\hyperlink{classdll_1_1_node}{Node}} *\mbox{\hyperlink{classdll_1_1_node_a68fca56b3a2b51ba1aeb35ca86cf531a}{getPrevNode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{69         \mbox{\hyperlink{classdll_1_1_node}{Node}} *\mbox{\hyperlink{classdll_1_1_node_ad88f09e78e7464085ecbfacaf2b9e101}{getNextNode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{77         \textcolor{keywordtype}{void} \mbox{\hyperlink{classdll_1_1_node_a7a94f7fd0f7d7a88d9f1914cf3371c41}{setValue}}(\textcolor{keywordtype}{int} val);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{86         \textcolor{keywordtype}{void} \mbox{\hyperlink{classdll_1_1_node_a2004e4d26dc50596c31c3e86e631aae1}{setPrevNode}}(\mbox{\hyperlink{classdll_1_1_node}{Node}} *node);}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{95         \textcolor{keywordtype}{void} \mbox{\hyperlink{classdll_1_1_node_a46964737353d72c6cdc9fc78fd50e521}{setNextNode}}(\mbox{\hyperlink{classdll_1_1_node}{Node}} *node);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97         \textcolor{comment}{// TODO: Documentar generateNextKey()}}
+\DoxyCodeLine{98     \};}
+\DoxyCodeLine{99 \}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{comment}{// TODO: implementar NodeFactory}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{104 }
+
+\end{DoxyCode}

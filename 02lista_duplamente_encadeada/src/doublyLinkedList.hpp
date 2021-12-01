@@ -171,7 +171,7 @@ namespace dll {
         bool isEmpty(void);
 
         /**
-         * Documentation block for method
+         * !!! EM CONSTRUCAO
          */
         bool isFull(void);
 
