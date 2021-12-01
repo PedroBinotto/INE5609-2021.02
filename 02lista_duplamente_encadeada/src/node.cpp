@@ -14,14 +14,22 @@
 
 using namespace dll;
 
-Node::Node(Node *nextNode, Node *prevNode, int val) { }
+Node::Node(int val, Node* nextNode, Node* prevNode) {
+    key = generateNextKey();
+    value = val;
+    next = nextNode;
+    prev = prevNode;
+}
 
-int Node::getValue(void) { }
-long Node::getKey(void) { }
-Node *Node::getPrevNode(void) { }
-Node *Node::getNextNode(void) { }
+long Node::nextId = 0;      /// Inicializando variavel estatica
 
-void Node::setValue(int val) { }
-void Node::setPrevNode(Node *nextNode) { }
-void Node::setNextNode(Node *nextNode) { }
+int Node::getValue(void) { return value;}
+long Node::getKey(void) { return key;}
+Node *Node::getPrevNode(void) { return prev;}
+Node *Node::getNextNode(void) { return next;}
 
+void Node::setValue(int val) { value = val;}
+void Node::setPrevNode(Node *node) { prev = node;}
+void Node::setNextNode(Node *node) { next = node;}
+
+long Node::generateNextKey(void) { return ++nextId; }

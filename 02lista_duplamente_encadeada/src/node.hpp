@@ -25,11 +25,14 @@ namespace dll {
         int value;
         Node *prev;
         Node *next;
+
+        static long nextId;
+        static long generateNextKey(void);
     public:
         /**
          * Documentation block for method
          */
-        Node(Node *nextNode=NULL, Node *prevNode=NULL, int val=0);
+        Node(int val=0, Node *nextNode=NULL, Node *prevNode=NULL);
 
         /**
          * Documentation block for method
@@ -59,14 +62,16 @@ namespace dll {
         /**
          * Documentation block for method
          */
-        void setPrevNode(Node *nextNode);
+        void setPrevNode(Node *node);
 
         /**
          * Documentation block for method
          */
-        void setNextNode(Node *nextNode);
+        void setNextNode(Node *node);
     };
 }
+
+// TODO: implementar NodeFactory
 
 #endif
 
