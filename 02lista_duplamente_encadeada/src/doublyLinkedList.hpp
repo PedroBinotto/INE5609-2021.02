@@ -28,32 +28,55 @@ namespace dll {
         // TODO: implementar destructor -> freeList(void)->[tambem por fazer]
     public:
         /**
-         * Documentation block for method
+         * Construtor da classe (no-args constructor)
          */
         DoublyLinkedList(void);
 
         /**
-         * Documentation block for method
+         * Retorna elemento atual para qual o cursor da lista esta aponta
+         *
+         * @returns Ponteiro para nodo atual atribuido ao cursor ou NULL
+         *     em caso de uma lista vazia
          */
         Node *getCurrentNode(void);
 
         /**
-         * Documentation block for method
+         * Metodo que permite inserir um nodo na posicao anterior ao atual
+         *     elemento da lista para qual o cursor esta apontando
+         *
+         * @note Elemento adicionado a posicao HEAD e TAIL no caso de uma
+         *     lista vazia
+         * @param node Elemento a ser adicionado a lista
          */
         void insertBeforeCurrent(Node *node);
 
         /**
-         * Documentation block for method
+         * Metodo que permite inserir um nodo na posicao posterior ao atual
+         *     elemento da lista para qual o cursor esta apontando
+         *
+         * @note Elemento adicionado a posicao HEAD e TAIL no caso de uma
+         *     lista vazia
+         * @param node Elemento a ser adicionado a lista
          */
         void insertAfterCurrent(Node *node);
 
         /**
-         * Documentation block for method
+         * Metodo que permite adicionar um elemento a primeira posicao
+         *     (HEAD) da lista encadeada
+         *
+         * @note Elemento sera adicionado a posicao HEAD e TAIL no caso de
+         *     uma lista vazia
+         * @param node Elemento a ser adicionado a lista
          */
         void insertFirst(Node *node);
 
         /**
-         * Documentation block for method
+         * Metodo que permite adicionar um elemento a ultima posicao
+         *     (TAIL) da lista encadeada
+         *
+         * @note Elemento sera adicionado a posicao HEAD e TAIL no caso de
+         *     uma lista vazia
+         * @param node Elemento a ser adicionado a lista
          */
         void insertLast(Node *node);
 
