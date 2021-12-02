@@ -21,6 +21,8 @@ DoublyLinkedList::DoublyLinkedList(void) : cursor(head) {
     head = &ptr1;
     tail = &ptr2;
     cursor = Cursor(head);
+
+    currentSize = 0;
 }
 
 Node *DoublyLinkedList::getCurrentNode(void) {
@@ -171,30 +173,25 @@ bool DoublyLinkedList::search(long key) {
     return true;
 }
 
-bool DoublyLinkedList::isEmpty(void) { return (*head) == NULL; }
-
-bool DoublyLinkedList::isFull(void) { return false; }           // ?? nao faco ideia do que seja
-
 long DoublyLinkedList::getIndexByKey(long key) {
-    // utilizar cursor
-    if ((*head) == NULL) {
-        return -1;
-    }
+    cursor.goToHead();
+    Node *current = cursor.getCurrentNode();
+    if (current == NULL) { return -1; }
 
-    Node *tmp = (*head);
     long index = 0;
 
-    while (true) {
-        if (tmp->getKey() == key) {
-            return index;
-        }
-
-        if (tmp->getNextNode() != NULL) {
+    while (cursor.getCurrentNode()->getKey() != key) {
+        if (cursor.getCurrentNode()->getNextNode() != NULL) {
             index++;
-            tmp = tmp->getNextNode();
+            cursor.proceedNPositions(1);
         } else {
             return -1;
         }
     }
+    return index;
 }
+
+bool DoublyLinkedList::isEmpty(void) { return (*head) == NULL; }
+
+bool DoublyLinkedList::isFull(void) { return false; }           // TODO: impl
 
