@@ -12,7 +12,12 @@
 
 #include <iostream>
 
+#include "doublyLinkedList.hpp"
+
 int main(void) {
+    dll::DoublyLinkedList list = dll::DoublyLinkedList();
+    dll::Node *n = list.getCurrentNode();
+
     return 0;
 }
 

@@ -15,9 +15,10 @@
 
 using namespace dll;
 
-Cursor::Cursor(Node **&listHead) {
-    head = listHead;
-    current = (*listHead);
+Cursor::Cursor(Node ***listHead) {
+    head = (*listHead);
+    /* current = NULL; */
+    current = (*head);
 }
 
 bool Cursor::regress(void) { 

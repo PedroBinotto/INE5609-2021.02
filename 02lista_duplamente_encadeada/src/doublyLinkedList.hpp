@@ -21,7 +21,7 @@ namespace dll {
      */
     class DoublyLinkedList {
     private:
-        Cursor cursor;
+        Cursor *cursor;
         Node **head;
         Node **tail;
         long currentSize;

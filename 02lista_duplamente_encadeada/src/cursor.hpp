@@ -32,7 +32,7 @@ namespace dll {
          *
          * @param listHead HEAD da lista a qual o objeto cursor pertence
          */
-        Cursor(Node **&listHead);
+        Cursor(Node ***listHead);
 
         /**
          * Move o cursor "n" posicoes em direcao a TAIL da lista
