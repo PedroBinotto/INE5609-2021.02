@@ -24,9 +24,10 @@ namespace dll {
         Cursor cursor;
         Node **head;
         Node **tail;
-        void handleRemove(Node *node);
+        void handleRemove(Node *node); // se deus quiser da pra tirar esse cara aqui
 
         // TODO: implementar destructor -> freeList(void)->[tambem por fazer]
+        // TODO: Re-documentar metodos onde o cursor sera utilizado na operacao
     public:
         /**
          * Construtor da classe (no-args constructor)
@@ -172,7 +173,7 @@ namespace dll {
         bool isEmpty(void);
 
         /**
-         * !!! EM CONSTRUCAO
+         * !!! TODO: EM CONSTRUCAO
          */
         bool isFull(void);
 

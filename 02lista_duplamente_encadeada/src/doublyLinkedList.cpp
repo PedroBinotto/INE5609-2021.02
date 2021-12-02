@@ -70,61 +70,22 @@ void DoublyLinkedList::insertAfterCurrent(Node *node) {
 }
 
 void DoublyLinkedList::insertFirst(Node *node) {
-    // refatorar -> cursor.goToHead && insertBeforeCurrent
-    if ((*head) != NULL) {
-        (*head)->setPrevNode(node);
-        node->setNextNode((*head));
-        head = &node;
-        return;
-    }
-    head = &node;
-    tail = &node;
+    // TODO: redocumentar
+    cursor.goToHead();
+    insertBeforeCurrent(node);
 }
 
 void DoublyLinkedList::insertLast(Node *node) {
-    // refatorar -> cursor.goToTail && insertAfterCurrent
-    if ((*tail) != NULL) {
-        (*tail)->setNextNode(node);
-        node->setPrevNode((*tail));
-        tail = &node;
-        return;
-    }
-    head = &node;
-    tail = &node;
+    // TODO: redocumentar
+    cursor.goToHead();
+    insertAfterCurrent(node);
 }
 
 void DoublyLinkedList::insertAtIndex(long index, Node *node) {
-    // refatorar -> cursor.goToHead
-    //   && cursor.proceedNPositions(index)
-    //   && insertBeforeCurrent()
-
-    if ((*head) == NULL) {
-        head = &node;
-        tail = &node;
-        cursor.goToHead();
-        return;
-    }
-
-    Node *tmp = (*head);
-
-    for (int i = 0; i < index; i++) {
-        if (tmp->getNextNode() != NULL) {
-            tmp = tmp->getNextNode();
-        } else {
-            tmp->setNextNode(node);
-            node->setPrevNode(tmp);
-            return;
-        }
-    }
-
-    if (tmp->getPrevNode() != NULL) {
-        Node *prevNode = tmp->getPrevNode();
-        prevNode->setNextNode(node);
-        node->setPrevNode(prevNode);
-    }
-
-    node->setNextNode(tmp);
-    tmp->setPrevNode(node);
+    // TODO: redocumentar
+    cursor.goToHead();
+    cursor.proceedNPositions(index);
+    insertBeforeCurrent(node);
 }
 
 void DoublyLinkedList::removeCurrent(void) {
@@ -155,41 +116,16 @@ void DoublyLinkedList::removeCurrent(void) {
 }
 
 void DoublyLinkedList::removeFirst(void) {
-    // refatorar -> cursor.goToHead && removeCurrent()
-    if ((*head) == NULL) { return; }
-    Node *second = (*head)->getNextNode();
+    // TODO: redocumentar
+    cursor.goToHead();
+    removeCurrent();
 
-    if (second != NULL) {
-        if (cursor.getCurrentNode() == (*head)) {
-            cursor.proceedNPositions(1);
-        }
-        delete (*head);
-        (*head) = second;
-    } else {
-        cursor.setCurrentToNull();
-        delete (*head);
-        (*head) = NULL;
-        (*tail) = NULL;
-    }
 }
 
 void DoublyLinkedList::removeLast(void) {
-    // refatorar -> cursor.goToTail && removeCurrent()
-    if ((*tail) == NULL) { return; }
-    Node *secondToLast = (*tail)->getPrevNode();
-
-    if (secondToLast != NULL) {
-        if (cursor.getCurrentNode() == (*tail)) {
-            cursor.regressNPositions(1);
-        }
-        delete (*tail);
-        (*tail) = secondToLast;
-    } else {
-        cursor.setCurrentToNull();
-        delete (*tail);
-        (*head) = NULL;
-        (*tail) = NULL;
-    }
+    // TODO: redocumentar
+    cursor.goToTail();
+    removeCurrent();
 }
 
 void DoublyLinkedList::removeByKey(long key) {
@@ -213,19 +149,9 @@ void DoublyLinkedList::removeByKey(long key) {
 }
 
 void DoublyLinkedList::removeFromIndex(long index) {
-    // refatorar -> cursor.goToHead
-    //   && cursor.proceedNPositions(index)
-    //   && removeCurrent
-    if ((*head) == NULL) { return; }
-
-    Node *tmp = (*head);
-
-    for (int i = 0; i < index; i++) {
-        if (tmp->getNextNode() != NULL) {
-            tmp = tmp ->getNextNode();
-        }
-    }
-    handleRemove(tmp);
+    cursor.goToHead();
+    cursor.proceedNPositions(index);
+    removeCurrent();
 }
 
 bool DoublyLinkedList::search(long key) {
