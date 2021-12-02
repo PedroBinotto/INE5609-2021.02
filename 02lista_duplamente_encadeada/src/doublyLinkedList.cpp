@@ -15,12 +15,12 @@
 
 using namespace dll;
 
-DoublyLinkedList::DoublyLinkedList(void) {
+DoublyLinkedList::DoublyLinkedList(void) : cursor(head) {
     Node *ptr1, *ptr2;
 
     head = &ptr1;
     tail = &ptr2;
-    cursor = Cursor((*head));
+    cursor = Cursor(head);
 }
 
 Node *DoublyLinkedList::getCurrentNode(void) {

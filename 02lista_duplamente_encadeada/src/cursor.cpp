@@ -15,12 +15,14 @@
 
 using namespace dll;
 
-Cursor::Cursor(Node *listHead) {
-    head = &listHead;
-    current = listHead;
+Cursor::Cursor(Node **&listHead) {
+    head = listHead;
+    current = (*listHead);
 }
 
 bool Cursor::regress(void) { 
+    if (current == NULL) { return false; }
+
     if (current->getPrevNode() != NULL) {   
         current = current->getPrevNode();
         return true;
@@ -28,6 +30,8 @@ bool Cursor::regress(void) {
     return false;
 }
 bool Cursor::proceed(void) { 
+    if (current == NULL) { return false; }
+
     if (current->getNextNode() != NULL) {
         current = current->getNextNode();
         return true;
