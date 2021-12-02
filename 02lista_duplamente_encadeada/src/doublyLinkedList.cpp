@@ -233,6 +233,7 @@ bool DoublyLinkedList::search(long key) {
 }
 
 bool DoublyLinkedList::isEmpty(void) { return (*head) == NULL; }
+
 bool DoublyLinkedList::isFull(void) { return false; }           // ?? nao faco ideia do que seja
 
 long DoublyLinkedList::getIndexByKey(long key) {

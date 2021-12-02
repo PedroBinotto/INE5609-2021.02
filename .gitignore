@@ -2,4 +2,7 @@
 !*/bin/.gitkeep
 */obj/*
 !*/obj/.gitkeep
+*/Doxyfile
+*/latex/
+*/html/
 

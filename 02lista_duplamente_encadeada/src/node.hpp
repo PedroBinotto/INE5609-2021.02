@@ -93,8 +93,6 @@ namespace dll {
          *     no campo privado 'next' do elemento
          */
         void setNextNode(Node *node);
-
-        // TODO: Documentar generateNextKey()
     };
 }
 
