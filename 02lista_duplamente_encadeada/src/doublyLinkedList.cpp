@@ -40,6 +40,8 @@ void DoublyLinkedList::insertBeforeCurrent(Node *node) {
     if (prev != NULL) {
         prev->setNextNode(node);
         node->setPrevNode(prev);
+    } else {
+        (*head) = node;
     }
 
     node->setNextNode(current);
@@ -59,6 +61,8 @@ void DoublyLinkedList::insertAfterCurrent(Node *node) {
     if (next != NULL) {
         next->setPrevNode(node);
         node->setNextNode(next);
+    } else {
+        (*tail) = node;
     }
 
     node->setPrevNode(current);
@@ -66,6 +70,7 @@ void DoublyLinkedList::insertAfterCurrent(Node *node) {
 }
 
 void DoublyLinkedList::insertFirst(Node *node) {
+    // refatorar -> cursor.goToHead && insertBeforeCurrent
     if ((*head) != NULL) {
         (*head)->setPrevNode(node);
         node->setNextNode((*head));
@@ -77,6 +82,7 @@ void DoublyLinkedList::insertFirst(Node *node) {
 }
 
 void DoublyLinkedList::insertLast(Node *node) {
+    // refatorar -> cursor.goToTail && insertAfterCurrent
     if ((*tail) != NULL) {
         (*tail)->setNextNode(node);
         node->setPrevNode((*tail));
@@ -88,6 +94,10 @@ void DoublyLinkedList::insertLast(Node *node) {
 }
 
 void DoublyLinkedList::insertAtIndex(long index, Node *node) {
+    // refatorar -> cursor.goToHead
+    //   && cursor.proceedNPositions(index)
+    //   && insertBeforeCurrent()
+
     if ((*head) == NULL) {
         head = &node;
         tail = &node;
@@ -145,6 +155,7 @@ void DoublyLinkedList::removeCurrent(void) {
 }
 
 void DoublyLinkedList::removeFirst(void) {
+    // refatorar -> cursor.goToHead && removeCurrent()
     if ((*head) == NULL) { return; }
     Node *second = (*head)->getNextNode();
 
@@ -163,6 +174,7 @@ void DoublyLinkedList::removeFirst(void) {
 }
 
 void DoublyLinkedList::removeLast(void) {
+    // refatorar -> cursor.goToTail && removeCurrent()
     if ((*tail) == NULL) { return; }
     Node *secondToLast = (*tail)->getPrevNode();
 
@@ -181,6 +193,7 @@ void DoublyLinkedList::removeLast(void) {
 }
 
 void DoublyLinkedList::removeByKey(long key) {
+    // utilizar cursor (euacho) 
     if ((*head) == NULL) { return; }
 
     Node *tmp = (*head);
@@ -200,6 +213,9 @@ void DoublyLinkedList::removeByKey(long key) {
 }
 
 void DoublyLinkedList::removeFromIndex(long index) {
+    // refatorar -> cursor.goToHead
+    //   && cursor.proceedNPositions(index)
+    //   && removeCurrent
     if ((*head) == NULL) { return; }
 
     Node *tmp = (*head);
@@ -237,6 +253,7 @@ bool DoublyLinkedList::isEmpty(void) { return (*head) == NULL; }
 bool DoublyLinkedList::isFull(void) { return false; }           // ?? nao faco ideia do que seja
 
 long DoublyLinkedList::getIndexByKey(long key) {
+    // utilizar cursor
     if ((*head) == NULL) {
         return -1;
     }
