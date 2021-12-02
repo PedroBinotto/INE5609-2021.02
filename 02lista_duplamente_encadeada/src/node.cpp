@@ -31,4 +31,4 @@ void Node::setPrevNode(Node *node) { prev = node;}
 void Node::setNextNode(Node *node) { next = node;}
 long Node::generateNextKey(void) { return ++nextId; }
 
-Node* NodeFactory::newNode(void) { return new Node();}
+Node* NodeFactory::newNode(int value=0) { return new Node(value);}

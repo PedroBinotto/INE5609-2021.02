@@ -72,7 +72,7 @@ namespace dll {
 
     class NodeFactory {
     public:
-        static Node *newNode(void);
+        static Node *newNode(int value=0);
     };
 }
 
