@@ -100,15 +100,27 @@ void DoublyLinkedList::removeCurrent(void) {
     if (prev != NULL) {
         cursor.regressNPositions(1);
         prev->setNextNode(next);
-    } else if (next != NULL) {
-        cursor.proceedNPositions(1);
     } else {
-        (*head) = NULL;
-        (*tail) = NULL;
-        cursor.setCurrentToNull();
+        if (next != NULL) {
+            (*head) = next;
+            cursor.proceedNPositions(1);
+        } else {
+            (*head) = NULL;
+            (*tail) = NULL;
+            cursor.goToHead();
+        }
     }
 
-    if (next != NULL) {
+    if (next == NULL) {
+        if (prev != NULL) {
+            (*tail) = prev;
+            cursor.regressNPositions(1);
+        } else {
+            (*head) = NULL;
+            (*tail) = NULL;
+            cursor.goToHead();
+        }
+    } else {
         next->setPrevNode(prev);
     }
 
@@ -129,23 +141,15 @@ void DoublyLinkedList::removeLast(void) {
 }
 
 void DoublyLinkedList::removeByKey(long key) {
-    // utilizar cursor (euacho) 
-    if ((*head) == NULL) { return; }
-
-    Node *tmp = (*head);
-
-    while (true) {
-        if (tmp->getKey() == key) {
-            handleRemove(tmp);
-            return;
-        }
-
-        if (tmp->getNextNode() != NULL) {
-            tmp = tmp->getNextNode();
+    cursor.goToHead();
+    while (cursor.getCurrentNode()->getKey() != key) {
+        if (cursor.getCurrentNode()->getNextNode() != NULL) {
+            cursor.proceedNPositions(1);
         } else {
             return;
         }
     }
+    removeCurrent();
 }
 
 void DoublyLinkedList::removeFromIndex(long index) {
@@ -199,52 +203,5 @@ long DoublyLinkedList::getIndexByKey(long key) {
             return -1;
         }
     }
-}
-
-void DoublyLinkedList::handleRemove(Node *node) {
-    Node *prevNode = node->getPrevNode();
-    Node *nextNode = node->getNextNode();
-
-    int _case;
-
-    if (nextNode == NULL && prevNode == NULL) {
-        _case = 0;
-    } else if (prevNode == NULL) {
-        _case = 1;
-    } else if (nextNode == NULL) {
-        _case = 2;
-    } else {
-        _case = 3;
-    }
-
-    switch(_case) {
-        case 0 : cursor.setCurrentToNull();
-                 (*head) = NULL;
-                 (*tail) = NULL;
-                 break;
-        case 1 :
-                 (*head) = nextNode;
-                 nextNode->setPrevNode(NULL);
-                 if (cursor.getCurrentNode() == node) {
-                     cursor.proceedNPositions(1);
-                 }
-                 break;
-        case 2 :
-                 (*tail) = prevNode;
-                 prevNode->setNextNode(NULL);
-                 if (cursor.getCurrentNode() == node) {
-                     cursor.regressNPositions(1);
-                 }
-                 break;
-        case 3 :
-                 prevNode->setNextNode(nextNode);
-                 nextNode->setPrevNode(prevNode);
-                 if (cursor.getCurrentNode() == node) {
-                     cursor.regressNPositions(1);
-                 }
-                 break;
-    }
-    delete node;
-    return;
 }
 
