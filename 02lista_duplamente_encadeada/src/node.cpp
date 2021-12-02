@@ -21,15 +21,14 @@ Node::Node(int val, Node* nextNode, Node* prevNode) {
     prev = prevNode;
 }
 
-long Node::nextId = 0;      /// Inicializando variavel estatica
-
+long Node::nextId = 0;
 int Node::getValue(void) { return value;}
 long Node::getKey(void) { return key;}
 Node *Node::getPrevNode(void) { return prev;}
 Node *Node::getNextNode(void) { return next;}
-
 void Node::setValue(int val) { value = val;}
 void Node::setPrevNode(Node *node) { prev = node;}
 void Node::setNextNode(Node *node) { next = node;}
-
 long Node::generateNextKey(void) { return ++nextId; }
+
+Node* NodeFactory::newNode(void) { return new Node();}
