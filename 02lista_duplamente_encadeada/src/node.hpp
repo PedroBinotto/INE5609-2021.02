@@ -17,7 +17,7 @@
 
 namespace dll {
     /**
-     * Documentation block for class
+     * Classe representativa do elemento de uma lista duplamente encadeada
      */
     class Node {
     private:
@@ -30,44 +30,71 @@ namespace dll {
         static long generateNextKey(void);
     public:
         /**
-         * Documentation block for method
+         * Construtor da classe (default constructor)
          */
         Node(int val=0, Node *nextNode=NULL, Node *prevNode=NULL);
 
         /**
-         * Documentation block for method
+         * Metodo que retorna o valor associado com o nodo
+         *
+         * @returns Valor numerico armazenado no campo privado 'value'
+         *     do elemento
          */
         int getValue(void);
 
         /**
-         * Documentation block for method
+         * Metodo que retorna a chave de identificacao unica do nodo
+         *
+         * @returns Valor armazenado no campo privado 'key'
+         *     do elemento
          */
         long getKey(void);
 
         /**
-         * Documentation block for method
+         * Metodo que retorna o elemento anterior na lista encadeada
+         *
+         * @returns Ponteiro para nodo armazenado no campo privado
+         *     'prev' do elemento ou NULL quando nao ha um elemento
+         *     associado
          */
         Node *getPrevNode(void);
 
         /**
-         * Documentation block for method
+         * Metodo que retorna o elemento posterior na lista encadeada
+         *
+         * @returns Ponteiro para nodo armazenado no campo privado
+         *     'next' do elemento ou NULL quando nao ha um elemento
+         *     associado
          */
         Node *getNextNode(void);
 
         /**
-         * Documentation block for method
+         * Metodo que permite atribuir um valor numerico ao nodo
+         *
+         * @param val Valor a ser armazenado no campo privado
+         *     'value' do elemento
          */
         void setValue(int val);
 
         /**
-         * Documentation block for method
+         * Metodo que permite encadear um elemento anteriormente ao nodo
+         *     na lista encadeada
+         *
+         * @param node Ponteiro para nodo a ser armazenado
+         *     no campo privado 'prev' do elemento
          */
         void setPrevNode(Node *node);
 
         /**
-         * Documentation block for method
+         * Metodo que permite encadear um elemento posteriormente ao nodo
+         *     na lista encadeada
+         *
+         * @param node Ponteiro para nodo a ser armazenado
+         *     no campo privado 'next' do elemento
          */
         void setNextNode(Node *node);
+
+        // TODO: Documentar generateNextKey()
     };
 }
 
