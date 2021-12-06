@@ -21,12 +21,13 @@ namespace dll {
      */
     class DoublyLinkedList {
     private:
-        Cursor cursor;
+        Cursor *cursor;
         Node **head;
         Node **tail;
-        void handleRemove(Node *node);
+        long currentSize;
 
         // TODO: implementar destructor -> freeList(void)->[tambem por fazer]
+        // TODO: Re-documentar metodos onde o cursor sera utilizado na operacao
     public:
         /**
          * Construtor da classe (no-args constructor)
@@ -172,7 +173,7 @@ namespace dll {
         bool isEmpty(void);
 
         /**
-         * !!! EM CONSTRUCAO
+         * !!! TODO: EM CONSTRUCAO
          */
         bool isFull(void);
 
