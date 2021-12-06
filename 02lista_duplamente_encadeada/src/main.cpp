@@ -11,9 +11,41 @@
  */
 
 #include <iostream>
+#include "doublyLinkedList.hpp"
+#include "node.hpp"
 
 int main(void) {
-    
+
+    dll::DoublyLinkedList list = dll::DoublyLinkedList();
+
+    dll::Node nodo1 = dll::NodeFactory::newNode();
+    dll::Node nodo2 = dll::NodeFactory::newNode();
+    dll::Node nodo3 = dll::NodeFactory::newNode();
+    dll::Node nodo4 = dll::NodeFactory::newNode(); 
+    dll::Node nodo5 = dll::NodeFactory::newNode();
+    dll::Node nodo6 = dll::NodeFactory::newNode();
+
+
+    list.insertFirst(nodo1);
+    list.insertLast(nodo2);
+    list.getCurrentNode();
+    list.insertAfterCurrent(nodo3);
+    list.insertBeforeCurrent(nodo4);
+    list.insertAtIndex(3, nodo5);
+    list.isEmpty();
+    list.removeFirst();
+    list.removeLast();
+    list.isFull()
+
+
+
+
+
+
+
+
+
+
     return 0;
 }
 
