@@ -94,6 +94,11 @@ namespace dll {
          */
         void setNextNode(Node *node);
     };
+
+    class NodeFactory {
+    public:
+        static Node *newNode(int value=0);
+    };
 }
 
 // TODO: implementar NodeFactory
