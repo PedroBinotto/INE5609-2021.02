@@ -62,13 +62,12 @@ class LinkedList:
         tmp = self.__head
         if tmp == None:
             return None
-        pos = 0
         while tmp.next is not None:
             if tmp.text == word:
-                return pos
-            pos += 1
+                return tmp
             tmp = tmp.next
-        return None
+        if tmp.text == word:
+            return tmp
 
 class HashTable:
     def __init__(self, tableSize: int):
@@ -83,14 +82,10 @@ class HashTable:
         self.__table[self.__hash(word, self.__size)].storeWord(word)
 
     def removeWord(self, word):
-        pass
+        self.__table[self.__hash(word, self.__size)].removeWord(word)
 
     def lookUpWord(self, word: str):
-        hash = self.__hash(word, self.__size)
-        pos = self.__table[hash].lookUpWord(word)
-        if pos == None:
-            return None
-        return hash, pos
+        return self.__table[self.__hash(word, self.__size)].lookUpWord(word)
 
 class Reader:
     def __init__(self, textFile):
