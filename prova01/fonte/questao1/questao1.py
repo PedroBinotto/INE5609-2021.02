@@ -3,7 +3,7 @@ from item_b import itemB
 
 def questao1():
     itemA()
-    itemB()
+    # itemB() # muito grande pra executar toda vez
 
 if __name__ == '__main__':
     questao1()

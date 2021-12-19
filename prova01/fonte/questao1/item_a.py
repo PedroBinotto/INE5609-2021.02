@@ -16,11 +16,28 @@ def itemA():
 
     tmp = lista.head
     while True:
-        print( f"""{{
-  PALAVRA:     '{tmp.text}',
-  QUANTIDADE:   {tmp.quant}
-}},""")
+        print( f"""{{ PALAVRA: '{tmp.text}', QUANTIDADE: {tmp.quant} }},""")
         if tmp.next == None:
             return
         tmp = tmp.next
+
+def itemABenchmark():
+    scriptLocation = Path(__file__).absolute().parent
+    fileLocation = scriptLocation / 'biglebowski.txt'
+
+    lista = LinkedList()
+    r = Reader(fileLocation)
+    while True:
+        el = r.readNextWord()
+        if el == None:
+            break
+        lista.storeWord(el)
+
+    lista.lookUpWord('dude')
+    lista.lookUpWord('opinion')
+    lista.lookUpWord('dollars')
+    lista.lookUpWord('vietnam')
+
+if __name__ == '__main__':
+    itemABenchmark()
 

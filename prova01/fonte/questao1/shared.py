@@ -1,3 +1,5 @@
+import string
+
 class Node:
     def __init__(self, text: str, next=None):
         self.__quant = 1
@@ -42,7 +44,7 @@ class LinkedList:
         self.__tail = elem
 
     def storeWord(self, word: str):
-        word = word.lower()
+        word = word.lower().translate(str.maketrans('', '', string.punctuation))
         tmp = self.__head
         if tmp == None:
             self.__addElem(Node(word))
@@ -54,11 +56,8 @@ class LinkedList:
             tmp = tmp.next
         self.__addElem(Node(word))
 
-    def removeWord(self, word):
-        pass
-
     def lookUpWord(self, word: str):
-        word = word.lower()
+        word = word.lower().translate(str.maketrans('', '', string.punctuation))
         tmp = self.__head
         if tmp == None:
             return None
@@ -76,13 +75,10 @@ class HashTable:
 
     @staticmethod
     def __hash(val: str, max: int) -> int:
-        return len(val) % max
+        return sum([ord(char) for char in val]) % max
 
     def storeWord(self, word: str):
         self.__table[self.__hash(word, self.__size)].storeWord(word)
-
-    def removeWord(self, word):
-        self.__table[self.__hash(word, self.__size)].removeWord(word)
 
     def lookUpWord(self, word: str):
         return self.__table[self.__hash(word, self.__size)].lookUpWord(word)
