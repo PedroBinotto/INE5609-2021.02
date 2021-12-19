@@ -1,5 +1,5 @@
-from item_a import itemA
-from item_b import itemB
+from questao1.item_a import itemA
+from questao1.item_b import itemB
 
 def questao1():
     itemA()

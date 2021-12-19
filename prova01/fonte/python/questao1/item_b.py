@@ -1,5 +1,5 @@
 from pathlib import Path
-from shared import HashTable, Reader
+from questao1.shared import HashTable, Reader
 
 def itemB():
     scriptLocation = Path(__file__).absolute().parent

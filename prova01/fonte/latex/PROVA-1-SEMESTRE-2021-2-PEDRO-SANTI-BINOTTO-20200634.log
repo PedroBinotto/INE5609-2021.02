@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.11)  19 DEC 2021 00:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.11)  19 DEC 2021 01:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -138,14 +138,25 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line
  (/usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [7]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 300.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 300.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 300.
+
+Overfull \hbox (31.87836pt too wide) in paragraph at lines 300--308
+ [] 
+ []
+
 [8] [9] [10] [11]
 (./latex/PROVA-1-SEMESTRE-2021-2-PEDRO-SANTI-BINOTTO-20200634.aux) ) 
 Here is how much of TeX's memory you used:
- 3007 strings out of 478994
- 41449 string characters out of 5864750
+ 3024 strings out of 478994
+ 41632 string characters out of 5864750
  566444 words of memory out of 5000000
- 20524 multiletter control sequences out of 15000+600000
- 407239 words of font info for 40 fonts, out of 8000000 for 9000
+ 20535 multiletter control sequences out of 15000+600000
+ 409677 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,6n,60p,217b,1666s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share
@@ -155,7 +166,7 @@ ic/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
 r/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
 Output written on ./latex/PROVA-1-SEMESTRE-2021-2-PEDRO-SANTI-BINOTTO-20200634.
-pdf (11 pages, 73725 bytes).
+pdf (11 pages, 75884 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream

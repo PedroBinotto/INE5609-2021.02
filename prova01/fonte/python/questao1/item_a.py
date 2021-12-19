@@ -1,5 +1,5 @@
 from pathlib import Path
-from shared import LinkedList, Reader
+from questao1.shared import LinkedList, Reader
 
 # Questao 1 - Item a)
 def itemA():

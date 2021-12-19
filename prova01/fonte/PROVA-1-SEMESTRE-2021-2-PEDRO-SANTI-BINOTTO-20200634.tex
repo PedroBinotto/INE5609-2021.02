@@ -237,7 +237,7 @@ def itemB():
     tabela.lookUpWord('dude')
     tabela.lookUpWord('opinion')
     tabela.lookUpWord('dollars')
-    lista.lookUpWord('vietnam')
+    tabela.lookUpWord('vietnam')
 \end{lstlisting}
 
 Resultados:
@@ -278,13 +278,99 @@ elementos "cegamente", como no caso da lista encadeada.
 \newpage
 \section{Questão 2}
 \subsection{ITEM A)}
+\paragraph{}
+De forma geral, quando se analisa a performance de algoritmos e estruturas de dados, os
+dois grandes fatores à serem considerados são a complexidade de tempo e de espaço, isto é,
+ quanto tempo é consumido para executar dada operação (geralmente relativo ao tamanho do
+ input, ou quantidade de dados), e a memória que será utilizada para executar estas
+ operações.
+
+\paragraph{}
+Estes fatores, em combinação, são o que geralmente se denomina "complexidade computacional",
+e como já disse Terry Davis, "Um bobão admira a complexidade,
+um gênio admira a simplicidade".
 
 \subsection{ITEM B)}
+\paragraph{}
+Para representar os diferentes possíveis estados das soluções apresentadas, será utilizada
+uma tabela, que denota (em "Big O") a complexidade computacional de cada cenário para
+cada solução.
+
+\begin{center}
+\begin{tabular}{ | c | c | c | c | c | }
+ \hline
+    & INSERCAO [CM] & BUSCA [CM] & INSERCAO [PC] & BUSCA [PC] \\
+ \hline\hline
+    ARRAY & O(1) & O(1) & O(n) & O(n) \\
+    LISTA & O(1) & O(n) & O(n) & O(n) \\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{}
+Como pode ser observado, a complexidade espacial é equivalente entre as duas soluções,
+isto ocorre pois em ambos os casos a memória alocada é (praticamente) dada apenas pelos
+nodos gerados na execução das tarefas, que depende apenas do tamanho de input de dados.
+
+\paragraph{}
+Na complexidade temporal, no entanto, pode ser claramente observada a vantagem que a tabela
+construida com o array apresenta; ao indexar os elementos à partir do hashing, aproximamos
+o tempo de execução das operações ao tempo constante (O(1)). Isto ocorre por que, quando
+não ocorrem conflitos, a posição do elemento na lista já é conhecida antes mesmo de
+acessa-la. Em comparação, utilizando a lista encadeada, a performance observada é
+equivalente ao caso de conflito de quando se utiliza o array: é necessário iterar sobre
+os elementos até que se encontre o valor desejado, aproximando-nos à O(n).
 
 % QUESTAO 3
 \newpage
 \section{Questão 3}
-PROVA PROVA PROVA PROVA PROVA PROVA PROVA
+\subsection{ITEM A)}
+\paragraph{}
+Sim, afetaria. Partindo do pressuposto que o fator de carga (C) é dado pela proporção
+matemática entre a quantidade de chaves (itens, N) e a quantidade de slots (M) no
+(C = N/M) array da tabela, ao diminuir o número de itens na tabela, diminui-se o fator
+de carga da tabela também.
+
+\subsection{ITEM B)}
+\paragraph{}
+Tratando de HashTables tradicionais, isto é, que utilizam encadeamento direto em colisões,
+cada elemento no array de espelho pode representar a "cabeça" de uma lista encadeada - que,
+por natureza, permite reconfigurar seu elementos sem precisar realocar os itens
+não-alterados. Isto se dá por que a lista encadeada é alocada um item por vez;
+em contraste, um array tradicional (estilo C) é alocado "todo de uma vez", em um bloco
+contínuo na memória.
+
+\paragraph{}
+Sendo assim, ao remover os itens que não atendem os critérios para permanecer, tudo o
+que ocorre é que se "re-aponta" os ponteiros dos nodos vizinhos para acomodar a nova
+configuração dos dados.
+
+\paragraph{}
+Portanto, conclui-se que os  elementos que não atenderem o critério podem simplesmente
+ser deixados no lugar (contanto que a transferência dos demais tenha sido realizada
+competentemente), bastando apenas renomear "Monstrinho".
+
+\subsection{ITEM C)}
+\paragraph{}
+O intervalo possível de fator de carga para "Filhote" estende-se de 0 (caso elemento
+nenhum satisfaça os critérios para ser incluso) à N, sendo N a carga original de
+monstrinho (considerando que Filhote tenha sido instanciado com o mesmo número de
+"espaços" disponiveis no array de espelho que Monstrinho), no caso de todos os elementos
+aderirem aos critérios.
+
+\paragraph{}
+Em relação à "Pequenino", a tendência é do fator de carga diminuir ao ritmo que os itens
+originais presentes em "Monstrinho" satisfazem (ou não) os requisitos para serem
+transferidos para a tabela "Filhote".
+
+\paragraph{}
+Sendo assim, o novo fator de carga de "Pequenino"
+é determinado por "C = (N - X) / M", onde C representa o fator de carga; M, o número de
+espaços; N, o número original de itens (de "Monstrinho"); e X, o número de itens que
+atendem os critérios de transferência, que pode variar entre 0 e N.
+
+\subsection{ITEM D)}
+\paragraph{}
 
 % QUESTAO 4
 \newpage
